@@ -77,4 +77,4 @@ def run_server(comm):
     plt.grid(True)
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig(f"federated_metrics.png")
