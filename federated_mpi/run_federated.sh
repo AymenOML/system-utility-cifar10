@@ -14,7 +14,7 @@
 #SBATCH --mail-type=FAIL
 
 # Load required modules
-module purge
+module --force purge
 module load StdEnv/2023
 module load python/3.11
 module load openmpi/4.1.5
