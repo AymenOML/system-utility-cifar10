@@ -15,7 +15,10 @@
 
 # Load required modules
 module purge
-module load python/3.11 openmpi/4.1.5
+module load StdEnv/2023
+module load python/3.11
+module load openmpi/4.1.5
+module load mpi4py/4.0.3
 
 # Activate pre-created virtual environment
 source $HOME/venvs/fedcifar/bin/activate
