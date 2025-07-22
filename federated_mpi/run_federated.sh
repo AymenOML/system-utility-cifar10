@@ -7,7 +7,7 @@
 #SBATCH --ntasks=5                    # 1 server + 2 clients
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
-#SBATCH --time=0-01:00:00
+#SBATCH --time=0-12:00:00
 #SBATCH --output=logs/fed_cifar10_%j.out
 #SBATCH --error=logs/fed_cifar10_%j.err
 #SBATCH --mail-user=oumaliaymen@gmail.com
