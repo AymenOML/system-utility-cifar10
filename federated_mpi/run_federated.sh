@@ -21,7 +21,7 @@ module load python/3.11 openmpi/4.1.5
 source $HOME/venvs/fedcifar/bin/activate
 
 # Move to your project directory
-cd $HOME/system-utility-cifar10
+cd $HOME/scratch/system-utility-cifar10
 
 # Ensure matplotlib uses non-GUI backend (important for Cedar)
 export MPLBACKEND=Agg
