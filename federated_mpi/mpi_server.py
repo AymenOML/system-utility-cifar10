@@ -1,5 +1,7 @@
 import sys
 import os
+from config.config import NUM_ROUNDS
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 import builtins
@@ -31,7 +33,7 @@ def run_server(comm):
     loss_list = []
     rounds = []
 
-    for round_num in range(1, 21):
+    for round_num in range(1, NUM_ROUNDS+1):
         print(f"\n===== Round {round_num} =====",flush=True)
         print("Broadcasting global model to all clients...", flush=True)
 
