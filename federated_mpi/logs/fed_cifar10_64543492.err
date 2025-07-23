@@ -1,0 +1,17 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) CCconfig        6)  ucx/1.14.1         11) flexiblas/3.3.1
+  2) gentoo/2023     7)  libfabric/1.18.0   12) imkl/2023.2.0
+  3) gcccore/.12.3   8)  pmix/4.2.4         13) StdEnv/2023
+  4) gcc/12.3        9)  ucc/1.2.0
+  5) hwloc/2.9.1     10) openmpi/4.1.5
+/localscratch/spool/slurmd/job64543492/slurm_script: line 24: cd: /home/aymenoml/system-utility-cifar10: No such file or directory
+/home/aymenoml/venvs/fedcifar/bin/python: can't open file '/scratch/aymenoml/system-utility-cifar10/federated_mpi/federated_mpi/mpi_main.py': [Errno 2] No such file or directory
+/home/aymenoml/venvs/fedcifar/bin/python: can't open file '/scratch/aymenoml/system-utility-cifar10/federated_mpi/federated_mpi/mpi_main.py': [Errno 2] No such file or directory
+/home/aymenoml/venvs/fedcifar/bin/python: can't open file '/scratch/aymenoml/system-utility-cifar10/federated_mpi/federated_mpi/mpi_main.py': [Errno 2] No such file or directory
+/home/aymenoml/venvs/fedcifar/bin/python: can't open file '/scratch/aymenoml/system-utility-cifar10/federated_mpi/federated_mpi/mpi_main.py': [Errno 2] No such file or directory
+/home/aymenoml/venvs/fedcifar/bin/python: can't open file '/scratch/aymenoml/system-utility-cifar10/federated_mpi/federated_mpi/mpi_main.py': [Errno 2] No such file or directory
+srun: error: cdr1700: tasks 0-4: Exited with exit code 2
+srun: Terminating StepId=64543492.0
+cp: cannot stat 'federated_metrics.png': No such file or directory
