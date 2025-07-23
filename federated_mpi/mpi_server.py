@@ -12,6 +12,9 @@ from model import build_cnn_model
 from data_loader import load_and_preprocess_data
 from mpi_utils import serialize_weights, deserialize_weights
 from mpi4py import MPI
+import csv
+import pandas as pd
+
 
 
 def average_weights(weight_list):
@@ -21,6 +24,7 @@ def average_weights(weight_list):
     return avg_weights
 
 def run_server(comm):
+
     print("=== Federated Server Started ===", flush=True)
     num_clients = comm.Get_size() - 1
     print(f"Total processes: {num_clients + 1} (1 server + {num_clients} clients)\n", flush=True)
@@ -34,20 +38,28 @@ def run_server(comm):
     acc_list = []
     loss_list = []
     rounds = []
+    all_client_metrics = []
 
-    for round_num in range(1, NUM_ROUNDS+1):
-        print(f"\n===== Round {round_num} =====",flush=True)
+    for round_num in range(1, NUM_ROUNDS + 1):
+        print(f"\n===== Round {round_num} =====", flush=True)
         print("Broadcasting global model to all clients...", flush=True)
-
         comm.bcast(global_weights, root=0)
 
         client_weights = []
-
         for i in range(1, num_clients + 1):
             print(f"Waiting for model weights from client {i}...", flush=True)
             received = comm.recv(source=i, tag=i)
             print(f"Received weights from client {i}", flush=True)
             client_weights.append(deserialize_weights(received))
+
+        client_metrics = []
+        for i in range(1, num_clients + 1):
+            metrics = comm.recv(source=i, tag=i + 100)
+            metrics['round'] = round_num  # Add round info
+            client_metrics.append(metrics)
+            print(f"Received system metrics from client {i}: {metrics}")
+
+        all_client_metrics.extend(client_metrics)
 
         print("Averaging model weights...")
         global_weights = average_weights(client_weights)
@@ -61,8 +73,11 @@ def run_server(comm):
         acc_list.append(accuracy)
         loss_list.append(loss)
 
-    print("\n=== Federated Training Complete ===",flush=True)
+    print("\n=== Federated Training Complete ===", flush=True)
     print("Generating training metrics plot...", flush=True)
+
+    df_metrics = pd.DataFrame(all_client_metrics)
+    df_metrics.to_csv("client_system_metrics.csv", index=False)
 
     plt.figure(figsize=(10, 4))
 
@@ -81,6 +96,5 @@ def run_server(comm):
     plt.grid(True)
 
     plt.tight_layout()
-    plt.savefig(f"federated_metrics.png")
-
+    plt.savefig("federated_metrics.png")
     return

@@ -3,3 +3,5 @@ tensorflow-federated==0.72.0
 mpi4py==3.1.5
 numpy>=1.21
 matplotlib>=3.5
+psutil 
+GPUtil
