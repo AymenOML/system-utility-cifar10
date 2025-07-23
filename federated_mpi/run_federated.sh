@@ -4,7 +4,7 @@
 
 #SBATCH --job-name=fed-cifar10
 #SBATCH --nodes=1                      # all tasks on 1 node
-#SBATCH --ntasks=5                    # 1 server + 2 clients
+#SBATCH --ntasks=5                    # 1 server + 4 clients
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=0-12:00:00

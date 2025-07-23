@@ -57,6 +57,9 @@ def run_server(comm):
         acc_list.append(accuracy)
         loss_list.append(loss)
 
+    comm.Barrier()
+    MPI.Finalize()
+
     print("\n=== Federated Training Complete ===",flush=True)
     print("Generating training metrics plot...", flush=True)
 

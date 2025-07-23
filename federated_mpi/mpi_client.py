@@ -37,6 +37,9 @@ def run_client(comm, rank):
         print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
         comm.send(updated_weights, dest=0, tag=rank)
 
+
     print(f"    [Client {rank}] Training complete. Waiting for others...", flush=True)
     comm.Barrier()
+    MPI.Finalize()
+    sys.exit(0)
     print(f"    [Client {rank}] Exiting.", flush=True)
