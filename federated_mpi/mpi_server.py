@@ -11,6 +11,8 @@ import matplotlib.pyplot as plt
 from model import build_cnn_model
 from data_loader import load_and_preprocess_data
 from mpi_utils import serialize_weights, deserialize_weights
+from mpi4py import MPI
+
 
 def average_weights(weight_list):
     avg_weights = []

@@ -6,6 +6,7 @@ import numpy as np
 from data_loader import load_and_preprocess_data
 from model import build_cnn_model
 from mpi_utils import serialize_weights, deserialize_weights
+from mpi4py import MPI
 
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
