@@ -11,9 +11,7 @@ def main():
         from mpi_client import run_client
         run_client(comm, rank)
 
-    # Finalization logic
-    comm.Barrier()
-    MPI.Finalize()
-
 if __name__ == '__main__':
     main()
+    # Finalization logic
+    MPI.Finalize()

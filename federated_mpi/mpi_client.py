@@ -7,6 +7,7 @@ from data_loader import load_and_preprocess_data
 from model import build_cnn_model
 from mpi_utils import serialize_weights, deserialize_weights
 from mpi4py import MPI
+from config.config import NUM_ROUNDS
 
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
@@ -26,7 +27,7 @@ def run_client(comm, rank):
     model = build_cnn_model()
 
     ### Change for number of rounds
-    for round_num in range(1, 21):
+    for round_num in range(1, NUM_ROUNDS + 1):
         print(f"    [Client {rank}] Round {round_num} - Waiting for global weights...", flush=True)
         global_weights = comm.bcast(None, root=0)
         model.set_weights(global_weights)
@@ -40,7 +41,6 @@ def run_client(comm, rank):
 
 
     print(f"    [Client {rank}] Training complete. Waiting for others...", flush=True)
-    comm.Barrier()
-    MPI.Finalize()
-    sys.exit(0)
     print(f"    [Client {rank}] Exiting.", flush=True)
+    return
+
