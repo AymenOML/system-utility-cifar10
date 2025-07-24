@@ -3,8 +3,8 @@
 # Usage: sbatch run_federated.sh
 
 #SBATCH --job-name=fed-cifar10
-#SBATCH --nodes=31                    # 1 server + 30 clients
-#SBATCH --ntasks=31
+#SBATCH --nodes=16                    # 1 server + 30 clients
+#SBATCH --ntasks=16
 #SBATCH --ntasks-per-node=1          # 1 MPI process per node
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16384M                 # 16 GB per task
@@ -41,28 +41,3 @@ srun --mpi=pmix python federated_mpi/mpi_main.py
 cp federated_metrics.png logs/federated_metrics_${SLURM_JOB_ID}.png
 
 
-# Load required modules
-module --force purge
-module load StdEnv/2023
-module load python/3.11
-module load openmpi/4.1.5
-module load mpi4py/4.0.3
-
-# Activate pre-created virtual environment
-source $HOME/venvs/fedcifar/bin/activate
-
-# Move to your project directory
-cd $HOME/scratch/system-utility-cifar10
-
-# Ensure matplotlib uses non-GUI backend (important for Cedar)
-export MPLBACKEND=Agg
-export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-
-# Create log directory if missing
-mkdir -p logs
-
-# Run federated training
-srun --ntasks=31 --mpi=pmix python federated_mpi/mpi_main.py # 1 server + 30 clients
-
-# Save final plot to logs
-cp federated_metrics.png logs/federated_metrics_${SLURM_JOB_ID}.png
