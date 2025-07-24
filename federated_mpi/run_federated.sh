@@ -3,11 +3,11 @@
 # Usage: sbatch run_federated.sh
 
 #SBATCH --job-name=fed-cifar10
-#SBATCH --nodes=16                    # 1 server + 30 clients
-#SBATCH --ntasks=16
-#SBATCH --ntasks-per-node=1          # 1 MPI process per node
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=16384M                 # 16 GB per task
+#SBATCH --nodes=11                          # 1 server + 10 clients, each on a node
+#SBATCH --gpus-per-node=v100l:1            # 1 GPU per node
+#SBATCH --ntasks-per-gpu=1                 # 1 MPI process per GPU
+#SBATCH --cpus-per-task=8                  # 8 CPU cores per MPI process
+#SBATCH --mem-per-cpu=2G                   # 16 GB per task (8 x 2)
 #SBATCH --time=0-12:00:00
 #SBATCH --output=logs/fed_cifar10_%j.out
 #SBATCH --error=logs/fed_cifar10_%j.err
@@ -21,23 +21,21 @@ module load python/3.11
 module load openmpi/4.1.5
 module load mpi4py/4.0.3
 
-# Activate your virtual environment
+# Activate virtual environment
 source $HOME/venvs/fedcifar/bin/activate
 
-# Go to your project directory
+# Move to project directory
 cd $HOME/scratch/system-utility-cifar10
 
 # Set matplotlib to non-interactive mode
 export MPLBACKEND=Agg
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-# Make sure logs directory exists
+# Create logs directory if not exist
 mkdir -p logs
 
-# Run the federated training
+# Launch distributed training with MPI
 srun --mpi=pmix python federated_mpi/mpi_main.py
 
-# Save metrics plot (only executed by server node if coded properly)
+# Save final plot
 cp federated_metrics.png logs/federated_metrics_${SLURM_JOB_ID}.png
-
-
