@@ -4,7 +4,7 @@
 
 #SBATCH --job-name=fed-cifar10
 #SBATCH --nodes=1                      # all tasks on 1 node
-#SBATCH --ntasks=11                    # 1 server + 10 clients
+#SBATCH --ntasks=31                   # 1 server + 30 clients
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=0-12:00:00
@@ -34,7 +34,7 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 mkdir -p logs
 
 # Run federated training
-srun --ntasks=11 --mpi=pmix python federated_mpi/mpi_main.py # 1 server + 10 clients
+srun --ntasks=31 --mpi=pmix python federated_mpi/mpi_main.py # 1 server + 30 clients
 
 # Save final plot to logs
 cp federated_metrics.png logs/federated_metrics_${SLURM_JOB_ID}.png
