@@ -48,6 +48,8 @@ def collect_system_metrics(rank, round_num):
 
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
+    print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
+
 
     (x_train, y_train), _ = load_and_preprocess_data()
 
@@ -74,14 +76,19 @@ def run_client(comm, rank):
 
         metrics = collect_system_metrics(rank, round_num)
         print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
-        comm.send(metrics, dest=0, tag=rank + 100)
 
-
+        try:
+            comm.send(metrics, dest=0, tag=rank+100)
+        except Exception as e:
+            print(f"[Client {rank}] Failed to send: {e}", flush=True)
 
         updated_weights = serialize_weights(model.get_weights())
         print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
-        comm.send(updated_weights, dest=0, tag=rank)
 
+        try:
+            comm.send(updated_weights, dest=0, tag=rank)
+        except Exception as e:
+            print(f"[Client {rank}] Failed to send: {e}", flush=True)
 
     print(f"    [Client {rank}] Training complete. Waiting for others...", flush=True)
     print(f"    [Client {rank}] Exiting.", flush=True)

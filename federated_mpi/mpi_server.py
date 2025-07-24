@@ -48,13 +48,25 @@ def run_server(comm):
         client_weights = []
         for i in range(1, num_clients + 1):
             print(f"Waiting for model weights from client {i}...", flush=True)
-            received = comm.recv(source=i, tag=i)
+
+            try:
+                received = comm.recv(source=i, tag=i)
+            except Exception as e:
+                print(f"[Server] Error receiving from client {i}: {e}", flush=True)
+                received = None
+
             print(f"Received weights from client {i}", flush=True)
             client_weights.append(deserialize_weights(received))
 
         client_metrics = []
         for i in range(1, num_clients + 1):
-            metrics = comm.recv(source=i, tag=i + 100)
+
+            try:
+                metrics = comm.recv(source=i, tag=i + 100)
+            except Exception as e:
+                print(f"[Server] Error receiving from client {i}: {e}", flush=True)
+                metrics = None
+
             metrics['round'] = round_num  # Add round info
             client_metrics.append(metrics)
             print(f"Received system metrics from client {i}: {metrics}")
