@@ -1,0 +1,377 @@
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: cdr2656
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: cdr2643
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: cdr2652
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: cdr2637
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: cdr2594
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: cdr2636
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: cdr2589
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: cdr2619
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: cdr2655
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: cdr2657
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Warning: Open MPI has detected that you are running in an environment with CUDA
+devices present and that you are using Intel(r) Ompi-Path networking. However,
+the environment variable PSM2_CUDA was not set, meaning that the PSM2 Omni-Path
+networking library was not told how to handle CUDA support.
+
+If your application uses CUDA buffers, you should set the environment variable
+PSM2_CUDA to 1; otherwise, set it to 0. Setting the variable to the wrong value
+can have performance implications on your application, or even cause it to
+crash.
+
+Since it was not set, Open MPI has defaulted to setting the PSM2_CUDA
+environment variable to 1.
+
+Local hostname: cdr2586
+--------------------------------------------------------------------------
+2025-07-24 12:55:22.282665: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-24 12:55:22.282637: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-24 12:55:22.282900: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-24 12:55:22.282679: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-24 12:55:22.282882: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-24 12:55:22.282650: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-24 12:55:22.502470: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-24 12:55:23.045872: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-24 12:55:23.137625: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-24 12:55:23.570898: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-24 12:55:23.632727: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-24 12:55:38.745540: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-24 12:55:38.746285: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-24 12:55:38.770517: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-24 12:55:38.778886: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-24 12:55:38.849059: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-24 12:55:38.928223: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-24 12:55:38.930082: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-24 12:55:38.972819: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-24 12:55:38.982872: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-24 12:55:39.004514: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-24 12:55:39.161385: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-24 12:55:40.664732: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-24 12:55:40.666282: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-24 12:55:40.685634: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-24 12:55:40.743019: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-24 12:55:40.803615: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-24 12:55:41.167283: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-24 12:55:41.444288: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-24 12:55:41.614457: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-24 12:55:41.614865: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-24 12:55:41.616202: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-24 12:55:41.618892: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-24 12:55:41.637010: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-24 12:55:41.813306: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-24 12:55:41.817699: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-24 12:55:41.831116: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-24 12:55:41.869821: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-24 12:55:41.994893: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-24 12:55:42.110296: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-24 12:55:42.854643: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-24 12:55:42.870143: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-24 12:55:42.871901: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-24 12:55:43.004477: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-24 12:55:47.461121: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-24 12:55:47.461435: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-24 12:55:47.461460: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-24 12:55:47.461757: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-24 12:55:47.464141: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-24 12:55:47.464175: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-24 12:55:48.183635: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-24 12:55:49.089346: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-24 12:55:49.388733: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-24 12:55:49.496719: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-24 12:55:50.307108: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-24 12:57:04.903752: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-07-24 12:57:04.914323: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-07-24 12:57:04.929040: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-07-24 12:57:04.932039: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-07-24 12:57:04.958072: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-07-24 12:57:04.959587: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-07-24 12:57:04.973573: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-07-24 12:57:04.995841: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-07-24 12:57:05.005951: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-07-24 12:57:05.011357: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-07-24 12:57:05.019031: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-07-24 12:59:13.607983: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0
+2025-07-24 12:59:13.653931: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-07-24 12:59:14.493458: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:af:00.0, compute capability: 7.0
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-07-24 12:59:15.078861: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2025-07-24 12:59:15.504127: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:18:00.0, compute capability: 7.0
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-07-24 12:59:18.816377: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:af:00.0, compute capability: 7.0
+2025-07-24 12:59:18.864877: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:18:00.0, compute capability: 7.0
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-07-24 12:59:20.857973: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0
+2025-07-24 12:59:21.711396: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:18:00.0, compute capability: 7.0
+2025-07-24 12:59:21.909158: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-07-24 12:59:23.958960: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:18:00.0, compute capability: 7.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1753387184.684223 1117127 service.cc:146] XLA service 0x154dd4021960 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1753387184.697985 1117127 service.cc:154]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1753387184.684015 2400793 service.cc:146] XLA service 0x154fa001f3d0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1753387184.698338 2400793 service.cc:154]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1753387184.684299 1339018 service.cc:146] XLA service 0x1505000300b0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1753387184.698351 1339018 service.cc:154]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1753387184.683901  169575 service.cc:146] XLA service 0x14d4900311f0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1753387184.698464  169575 service.cc:154]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1753387184.698225 1941085 service.cc:146] XLA service 0x15130401d060 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1753387184.700199 1941085 service.cc:154]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1753387184.684017 2772271 service.cc:146] XLA service 0x14d14c021c40 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1753387184.700596 2772271 service.cc:154]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1753387184.695157 3286573 service.cc:146] XLA service 0x1517c00344d0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1753387184.702214 3286573 service.cc:154]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1753387184.684655   59847 service.cc:146] XLA service 0x15114001dcb0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1753387184.710042   59847 service.cc:154]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1753387184.698344 1845168 service.cc:146] XLA service 0x145b7401d340 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1753387184.713189 1845168 service.cc:154]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1753387184.714056 2548218 service.cc:146] XLA service 0x15310401cc70 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1753387184.715739 2548218 service.cc:154]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2025-07-24 12:59:46.685079: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-07-24 12:59:46.685301: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-07-24 12:59:46.685411: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-07-24 12:59:46.685442: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-07-24 12:59:46.685393: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-07-24 12:59:46.685483: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-07-24 12:59:46.685688: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-07-24 12:59:46.685651: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-07-24 12:59:46.685899: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-07-24 12:59:46.695593: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-07-24 12:59:48.914198: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-07-24 12:59:48.914283: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-07-24 12:59:48.914325: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-07-24 12:59:48.914399: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-07-24 12:59:48.914503: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-07-24 12:59:48.914746: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-07-24 12:59:48.914941: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-07-24 12:59:48.921344: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-07-24 12:59:48.926440: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-07-24 12:59:48.945529: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+I0000 00:00:1753387196.960934 1941085 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1753387196.962221 1117127 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1753387196.963077 2772271 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1753387196.966679 1339018 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1753387196.974750   59847 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1753387196.976062 3286573 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1753387196.978904  169575 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1753387196.982401 1845168 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1753387196.990944 2548218 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1753387196.996968 2400793 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1753387205.675398 3415831 service.cc:146] XLA service 0x155368004150 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1753387205.677456 3415831 service.cc:154]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2025-07-24 13:00:06.200919: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-07-24 13:00:06.719262: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+I0000 00:00:1753387209.794063 3415831 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+Traceback (most recent call last):
+  File "/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 9, in main
+    run_server(comm)
+  File "/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_server.py", line 77, in run_server
+    global_weights = average_weights(client_weights)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_server.py", line 22, in average_weights
+    for weights in zip(*weight_list):
+                   ^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+srun: error: cdr2586: task 0: Exited with exit code 1
+srun: Terminating StepId=64642850.0
+srun: error: cdr2594: task 2: Terminated
+srun: error: cdr2636: task 4: Terminated
+srun: error: cdr2652: task 7: Terminated
+srun: error: cdr2589: task 1: Terminated
+srun: error: cdr2643: task 6: Terminated
+srun: error: cdr2619: task 3: Terminated
+srun: error: cdr2657: task 10: Terminated
+srun: error: cdr2637: task 5: Terminated
+srun: error: cdr2655: task 8: Terminated
+srun: error: cdr2656: task 9: Terminated
+srun: Force Terminated StepId=64642850.0
