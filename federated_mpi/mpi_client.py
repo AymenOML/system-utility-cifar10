@@ -5,6 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import numpy as np
 import psutil
 import GPUtil
+import tensorflow as tf
 from data_loader import load_and_preprocess_data
 from model import build_cnn_model
 from mpi_utils import serialize_weights, deserialize_weights
@@ -74,19 +75,21 @@ def run_client(comm, rank):
         print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
         model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
 
+        tf.keras.backend.clear_session() 
+
         metrics = collect_system_metrics(rank, round_num)
         print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
-
-        try:
-            comm.send(metrics, dest=0, tag=rank+100)
-        except Exception as e:
-            print(f"[Client {rank}] Failed to send: {e}", flush=True)
 
         updated_weights = serialize_weights(model.get_weights())
         print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
 
         try:
             comm.send(updated_weights, dest=0, tag=rank)
+        except Exception as e:
+            print(f"[Client {rank}] Failed to send: {e}", flush=True)
+
+        try:
+            comm.send(metrics, dest=0, tag=rank+100)
         except Exception as e:
             print(f"[Client {rank}] Failed to send: {e}", flush=True)
 
