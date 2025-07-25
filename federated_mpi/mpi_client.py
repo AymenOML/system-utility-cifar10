@@ -9,6 +9,7 @@ import tensorflow as tf
 from data_loader import load_and_preprocess_data
 from model import build_cnn_model
 from mpi_utils import serialize_weights, deserialize_weights
+from tensorflow.keras.utils import to_categorical
 from mpi4py import MPI
 from config.config import NUM_ROUNDS
 from datetime import datetime
@@ -52,17 +53,23 @@ def run_client(comm, rank):
     print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
 
 
-    (x_train, y_train), _ = load_and_preprocess_data()
+    # 1. Load data in memory-map mode WITHOUT preprocessing
+    (x_train_mmap, y_train_mmap), _ = load_and_preprocess_data(mmap_mode='r', preprocess=False)
 
-    # Split training data by client rank
+    # 2. Calculate the data slice for this client
     num_clients = comm.Get_size() - 1
-    total_samples = x_train.shape[0]
+    total_samples = x_train_mmap.shape[0]
     samples_per_client = total_samples // num_clients
     start = (rank - 1) * samples_per_client
     end = start + samples_per_client
 
-    x_client = x_train[start:end]
-    y_client = y_train[start:end]
+    # 3. Slice the data and load ONLY the slice into memory
+    x_client = np.array(x_train_mmap[start:end])
+    y_client = np.array(y_train_mmap[start:end])
+
+    # 4. Preprocess ONLY the client's local data
+    x_client = x_client.astype('float32') / 255.0
+    y_client = to_categorical(y_client, 10)
 
     model = build_cnn_model()
 
