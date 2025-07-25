@@ -18,10 +18,10 @@ import pandas as pd
 
 
 def average_weights(weight_list):
-    avg_weights = []
-    for weights in zip(*weight_list):
-        avg_weights.append(np.mean(weights, axis=0))
-    return avg_weights
+    if not weight_list or any(w is None for w in weight_list):
+        raise ValueError("Invalid weights received from clients.")
+    return [np.mean(weights, axis=0) for weights in zip(*weight_list)]
+
 
 def run_server(comm):
 
