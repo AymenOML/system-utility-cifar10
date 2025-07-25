@@ -71,18 +71,17 @@ def run_client(comm, rank):
     x_client = x_client.astype('float32') / 255.0
     y_client = to_categorical(y_client, 10)
 
-    model = build_cnn_model()
-
     ### Change for number of rounds
     for round_num in range(1, NUM_ROUNDS + 1):
+
+        model = build_cnn_model()
+
         print(f"    [Client {rank}] Round {round_num} - Waiting for global weights...", flush=True)
         global_weights = comm.bcast(None, root=0)
         model.set_weights(global_weights)
 
         print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
         model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
-
-        tf.keras.backend.clear_session() 
 
         metrics = collect_system_metrics(rank, round_num)
         print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
