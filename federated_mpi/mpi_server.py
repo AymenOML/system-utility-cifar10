@@ -38,7 +38,7 @@ def run_server(comm):
     acc_list = []
     loss_list = []
     rounds = []
-    all_client_metrics = []
+    # all_client_metrics = []
 
     for round_num in range(1, NUM_ROUNDS + 1):
         print(f"\n===== Round {round_num} =====", flush=True)
@@ -71,7 +71,7 @@ def run_server(comm):
             client_metrics.append(metrics)
             print(f"Received system metrics from client {i}: {metrics}")
 
-        all_client_metrics.extend(client_metrics)
+        # all_client_metrics.extend(client_metrics)
 
         print("Averaging model weights...")
         global_weights = average_weights(client_weights)
@@ -88,8 +88,8 @@ def run_server(comm):
     print("\n=== Federated Training Complete ===", flush=True)
     print("Generating training metrics plot...", flush=True)
 
-    df_metrics = pd.DataFrame(all_client_metrics)
-    df_metrics.to_csv("client_system_metrics.csv", index=False)
+    # df_metrics = pd.DataFrame(all_client_metrics)
+    # df_metrics.to_csv("client_system_metrics.csv", index=False)
 
     plt.figure(figsize=(10, 4))
 
