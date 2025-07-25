@@ -28,6 +28,7 @@ cd $HOME/scratch/system-utility-cifar10
 # Ensure matplotlib uses non-GUI backend
 export MPLBACKEND=Agg
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export PSM2_CUDA=0
 
 # Create logs directory
 mkdir -p logs
