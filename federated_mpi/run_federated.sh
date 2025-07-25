@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-node=1              # 1 GPU per node (V100, no need to specify type)
 #SBATCH --cpus-per-task=8              # 8 CPU cores per process
-#SBATCH --mem-per-cpu=2G               # 16 GB per process (8 x 2)
+#SBATCH --mem-per-cpu=4G               # 32 GB per process (8 x 4)
 #SBATCH --time=0-12:00:00
 #SBATCH --output=logs/fed_cifar10_%j.out
 #SBATCH --error=logs/fed_cifar10_%j.err
