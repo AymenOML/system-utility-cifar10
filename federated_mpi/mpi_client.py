@@ -14,12 +14,15 @@ from mpi4py import MPI
 from config.config import NUM_ROUNDS
 from datetime import datetime
 
-
 def collect_system_metrics(rank, round_num):
     import time
+    # This gets the current Python process
+    p = psutil.Process(os.getpid())
+    
     cpu_times = psutil.cpu_times()
     cpu_freq = psutil.cpu_freq().current
-    ram_used = psutil.virtual_memory().used / 1e6
+    # Get this process's memory usage (RSS: Resident Set Size)
+    ram_used = p.memory_info().rss / 1e6
     net = psutil.net_io_counters()
     net_sent = net.bytes_sent
     net_recv = net.bytes_recv
@@ -45,9 +48,6 @@ def collect_system_metrics(rank, round_num):
         "gpu_load": gpu_load
     }
 
-
-
-
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
     print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
@@ -71,10 +71,10 @@ def run_client(comm, rank):
     x_client = x_client.astype('float32') / 255.0
     y_client = to_categorical(y_client, 10)
 
+    model = build_cnn_model()
+
     ### Change for number of rounds
     for round_num in range(1, NUM_ROUNDS + 1):
-
-        model = build_cnn_model()
 
         print(f"    [Client {rank}] Round {round_num} - Waiting for global weights...", flush=True)
         global_weights = comm.bcast(None, root=0)
