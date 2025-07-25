@@ -13,6 +13,8 @@ from tensorflow.keras.utils import to_categorical
 from mpi4py import MPI
 from config.config import NUM_ROUNDS
 from datetime import datetime
+import platform
+
 
 def collect_system_metrics(rank, round_num):
     import time
@@ -50,7 +52,10 @@ def collect_system_metrics(rank, round_num):
 
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
-    print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
+
+    #print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
+
+    print(f"    [Client {rank}] Starting on host: {platform.node()}", flush=True)
 
 
     # 1. Load data in memory-map mode WITHOUT preprocessing
