@@ -3,7 +3,7 @@
 #SBATCH --nodes=11                      # 1 server + 10 clients
 #SBATCH --ntasks=11                     # 1 MPI process per node
 #SBATCH --ntasks-per-node=1
-#SBATCH --gpus-per-node=1              # 1 GPU per node (V100, no need to specify type)
+#SBATCH --gpus-per-node=1              # Request 1 GPU per node (A100 on Narval)
 #SBATCH --cpus-per-task=8              # 8 CPU cores per process
 #SBATCH --mem-per-cpu=4G               # 32 GB per process (8 x 4)
 #SBATCH --time=0-12:00:00
@@ -12,7 +12,11 @@
 #SBATCH --mail-user=oumaliaymen@gmail.com
 #SBATCH --mail-type=ALL
 
-# Load required modules
+# --- IMPORTANT CHANGE FOR NARVAL ---
+# You MUST specify your allocation account. Replace 'def-someprof' with your professor's account.
+#SBATCH --account=def-cherkaoui
+
+# Load required modules (these are generally consistent across clusters)
 module --force purge
 module load StdEnv/2023
 module load python/3.11
@@ -28,7 +32,11 @@ cd $HOME/scratch/system-utility-cifar10
 # Ensure matplotlib uses non-GUI backend
 export MPLBACKEND=Agg
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-export PSM2_CUDA=0
+
+# --- REMOVED FOR NARVAL ---
+# The PSM2_CUDA variable is specific to the interconnect on some Cedar nodes
+# and is not needed on Narval.
+# export PSM2_CUDA=0
 
 # Create logs directory
 mkdir -p logs
