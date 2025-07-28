@@ -53,9 +53,9 @@ def collect_system_metrics(rank, round_num):
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
 
-    #print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
+    print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
 
-    print(f"    [Client {rank}] Starting on host: {platform.node()}", flush=True)
+    #print(f"    [Client {rank}] Starting on host: {platform.node()}", flush=True)
 
 
     # 1. Load data in memory-map mode WITHOUT preprocessing
