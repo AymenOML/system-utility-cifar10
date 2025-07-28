@@ -14,7 +14,7 @@
 
 # --- IMPORTANT CHANGE FOR NARVAL ---
 # You MUST specify your allocation account. Replace 'def-someprof' with your professor's account.
-#SBATCH --account=def-cherkaoui
+#SBATCH --account=def-cherkaou-ab
 
 # Load required modules (these are generally consistent across clusters)
 module --force purge
