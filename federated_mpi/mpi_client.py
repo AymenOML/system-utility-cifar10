@@ -1,5 +1,7 @@
 import sys
 import os
+
+import torch
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 import numpy as np
@@ -13,11 +15,60 @@ from tensorflow.keras.utils import to_categorical
 from mpi4py import MPI
 from config.config import NUM_ROUNDS
 from datetime import datetime
-import platform
+
+
+import torch
+import time
+import torch.nn as nn
+import torch.optim as optim
+import numpy as np
+from torchvision import datasets, transforms
+from torch.utils.data import DataLoader, Subset
+from model import Net
+
+def evaluate_keras_model(model, x, y):
+    results = model.evaluate(x, y, verbose=0)
+    loss = results[0]
+    accuracy = results[1] * 100  # percentage
+    return loss, accuracy
+
+def compute_data_variance_tf(x):
+    x_flat = x.reshape(x.shape[0], -1)
+    return float(np.var(x_flat))
+
+def log_statistical_utility_tf(rank, round_num, x, y, model):
+    csv_path = "all_clients_stats.csv"
+    os.makedirs("client_logs", exist_ok=True)  # optional folder safety
+
+    data_size = x.shape[0]
+    data_variance = compute_data_variance_tf(x)
+    local_loss, local_accuracy = evaluate_keras_model(model, x, y)
+
+    file_exists = os.path.isfile(csv_path)
+    with open(csv_path, mode='a', newline='') as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow([
+                'client_rank', 'round', 'data_size',
+                'data_variance', 'local_loss', 'local_accuracy'
+            ])
+        writer.writerow([
+            rank, round_num, data_size,
+            data_variance, local_loss, local_accuracy
+        ])
+
+    return {
+        "client_rank": rank,
+        "round": round_num,
+        "data_size": data_size,
+        "data_variance": data_variance,
+        "local_loss": local_loss,
+        "local_accuracy": local_accuracy
+    }
+
 
 
 def collect_system_metrics(rank, round_num):
-    import time
     # This gets the current Python process
     p = psutil.Process(os.getpid())
     
@@ -87,6 +138,10 @@ def run_client(comm, rank):
 
         print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
         model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
+
+        stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
+        print(f"    [Client {rank}] Statistical Utility: {stats}", flush=True)
+
 
         metrics = collect_system_metrics(rank, round_num)
         print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
