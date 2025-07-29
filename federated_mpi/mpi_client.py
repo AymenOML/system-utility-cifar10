@@ -90,6 +90,17 @@ def collect_system_metrics(rank, round_num):
         "gpu_load": gpu_load
     }
 
+def compute_per_round_metrics(start_snapshot, end_snapshot):
+    return {
+        "cpu_time": end_snapshot["cpu_time"] - start_snapshot["cpu_time"],
+        "ram_used_mb": end_snapshot["ram_used_mb"],  # typically just take the latest
+        "net_sent_bytes": end_snapshot["net_sent_bytes"] - start_snapshot["net_sent_bytes"],
+        "net_recv_bytes": end_snapshot["net_recv_bytes"] - start_snapshot["net_recv_bytes"],
+        "gpu_mem_used_mb": end_snapshot["gpu_mem_used_mb"],
+        "gpu_load": end_snapshot["gpu_load"]
+    }
+
+
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
 
@@ -126,14 +137,25 @@ def run_client(comm, rank):
         model.set_weights(global_weights)
 
         print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
+        start_snapshot = collect_system_metrics(rank, round_num)
         model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
+
+        end_snapshot = collect_system_metrics(rank, round_num)
+        metrics = compute_per_round_metrics(start_snapshot, end_snapshot)
+        metrics.update({
+            "client_rank": rank,
+            "round": round_num,
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        })
+        print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
+
 
         stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
         print(f"    [Client {rank}] Statistical Utility: {stats}", flush=True)
 
 
-        metrics = collect_system_metrics(rank, round_num)
-        print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
+        # metrics = collect_system_metrics(rank, round_num)
+        # print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
 
         updated_weights = serialize_weights(model.get_weights())
         print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
