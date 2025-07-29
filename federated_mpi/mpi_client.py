@@ -1,7 +1,5 @@
 import sys
 import os
-
-import torch
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 import numpy as np
@@ -15,16 +13,7 @@ from tensorflow.keras.utils import to_categorical
 from mpi4py import MPI
 from config.config import NUM_ROUNDS
 from datetime import datetime
-
-
-import torch
-import time
-import torch.nn as nn
-import torch.optim as optim
-import numpy as np
-from torchvision import datasets, transforms
-from torch.utils.data import DataLoader, Subset
-from model import Net
+import csv
 
 def evaluate_keras_model(model, x, y):
     results = model.evaluate(x, y, verbose=0)
