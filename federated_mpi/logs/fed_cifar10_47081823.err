@@ -1,0 +1,171 @@
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 4, in <module>
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 4, in <module>
+    main()
+    import torch
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+ModuleNotFoundError: No module named 'torch'
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 4, in <module>
+    main()
+    import torch
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+ModuleNotFoundError: No module named 'torch'
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 4, in <module>
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+    import torch
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+ModuleNotFoundError: No module named 'torch'
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+srun: error: ng10404: task 1: Exited with exit code 1
+srun: error: ng30706: task 6: Exited with exit code 1
+srun: error: ng10606: task 2: Exited with exit code 1
+srun: error: ng11103: task 4: Exited with exit code 1
+srun: error: ng30709: task 7: Exited with exit code 1
+srun: error: ng31004: task 9: Exited with exit code 1
+srun: error: ng31003: task 8: Exited with exit code 1
+srun: error: ng31301: task 10: Exited with exit code 1
+srun: error: ng11102: task 3: Exited with exit code 1
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+srun: error: ng11105: task 5: Exited with exit code 1
+2025-07-28 21:46:09.341994: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-28 21:46:09.509508: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-28 21:46:09.562004: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-28 21:46:09.960445: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-28 21:46:13.144972: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-07-28 21:46:19.879958: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+[ng10303:4064671:0:4064671]       ud_ep.c:278  Fatal: UD endpoint 0x55ffaced1380 to <no debug data>: unhandled timeout error
+==== backtrace (tid:4064671) ====
+ 0 0x000000000005c1a0 uct_ud_ep_deferred_timeout_handler()  /tmp/ebuser/avx2/UCX/1.14.1/GCCcore-12.3.0/ucx-1.14.1/src/uct/ib/ud/base/ud_ep.c:278
+ 1 0x0000000000020799 ucs_callbackq_slow_proxy()  /tmp/ebuser/avx2/UCX/1.14.1/GCCcore-12.3.0/ucx-1.14.1/src/ucs/datastruct/callbackq.c:404
+ 2 0x000000000004487a ucs_callbackq_dispatch()  /tmp/ebuser/avx2/UCX/1.14.1/GCCcore-12.3.0/ucx-1.14.1/src/ucs/datastruct/callbackq.h:211
+ 3 0x000000000004487a uct_worker_progress()  /tmp/ebuser/avx2/UCX/1.14.1/GCCcore-12.3.0/ucx-1.14.1/src/uct/api/uct.h:2768
+ 4 0x000000000004487a ucp_worker_progress()  /tmp/ebuser/avx2/UCX/1.14.1/GCCcore-12.3.0/ucx-1.14.1/src/ucp/core/ucp_worker.c:2814
+ 5 0x0000000000033f5c opal_progress()  ???:0
+ 6 0x000000000003a1a5 ompi_sync_wait_mt()  ???:0
+ 7 0x000000000007b162 ompi_request_default_wait_all()  ???:0
+ 8 0x00000000000d6605 ompi_coll_base_bcast_intra_generic()  ???:0
+ 9 0x00000000000d68fc ompi_coll_base_bcast_intra_bintree()  ???:0
+10 0x00000000000eba7c ompi_coll_tuned_bcast_intra_dec_fixed()  ???:0
+11 0x000000000008e1b6 MPI_Bcast()  ???:0
+12 0x0000000000119bad PyMPI_Bcast_c()  /tmp/ebuser/avx2/mpi4py/4.0.3/gompi-2023a/mpi4py-4.0.3/src/lib-mpi/largecnt.h:619
+13 0x0000000000119bad __pyx_f_6mpi4py_3MPI_PyMPI_bcast()  /tmp/ebuser/avx2/mpi4py/4.0.3/gompi-2023a/mpi4py-4.0.3/src/mpi4py/MPI.c:111920
+14 0x0000000000119bad __pyx_pf_6mpi4py_3MPI_4Comm_276bcast()  /tmp/ebuser/avx2/mpi4py/4.0.3/gompi-2023a/mpi4py-4.0.3/src/mpi4py/MPI.c:203876
+15 0x0000000000119bad __pyx_pw_6mpi4py_3MPI_4Comm_277bcast()  /tmp/ebuser/avx2/mpi4py/4.0.3/gompi-2023a/mpi4py-4.0.3/src/mpi4py/MPI.c:203834
+16 0x00000000001c8393 _PyObject_VectorcallTstate()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/./Include/internal/pycore_call.h:92
+17 0x00000000001bbc70 _PyEval_EvalFrameDefault()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/ceval.c:4774
+18 0x00000000001b7d8a _PyEval_EvalFrame()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/./Include/internal/pycore_ceval.h:73
+19 0x00000000001b7d8a _PyEval_Vector()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/ceval.c:6444
+20 0x000000000023ffef PyEval_EvalCode()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/ceval.c:1154
+21 0x000000000025dc33 run_eval_code_obj()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/pythonrun.c:1712
+22 0x000000000025a2ba run_mod()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/pythonrun.c:1733
+23 0x0000000000270492 pyrun_file()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/pythonrun.c:1628
+24 0x000000000026f3a5 _PyRun_SimpleFileObject()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/pythonrun.c:440
+25 0x000000000026f074 _PyRun_AnyFileObject()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/pythonrun.c:79
+26 0x0000000000268fa7 pymain_run_file_obj()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Modules/main.c:360
+27 0x0000000000268fa7 pymain_run_file()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Modules/main.c:379
+28 0x0000000000268fa7 pymain_run_python()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Modules/main.c:601
+29 0x0000000000268fa7 Py_RunMain()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Modules/main.c:680
+30 0x0000000000230007 Py_BytesMain()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Modules/main.c:734
+31 0x000000000002394a __libc_init_first()  ???:0
+32 0x0000000000023a05 __libc_start_main()  ???:0
+33 0x0000000000001071 _start()  ???:0
+=================================
+[ng10303:4064671] *** Process received signal ***
+[ng10303:4064671] Signal: Aborted (6)
+[ng10303:4064671] Signal code:  (-6)
+[ng10303:4064671] [ 0] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(+0x38790)[0x14b6c330d790]
+[ng10303:4064671] [ 1] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(+0x867ac)[0x14b6c335b7ac]
+[ng10303:4064671] [ 2] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(gsignal+0x12)[0x14b6c330d6f2]
+[ng10303:4064671] [ 3] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(abort+0xd3)[0x14b6c32f74b2]
+[ng10303:4064671] [ 4] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/lib/libucs.so.0(+0x26e2b)[0x14b6bee3de2b]
+[ng10303:4064671] [ 5] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/lib/libucs.so.0(+0x26f11)[0x14b6bee3df11]
+[ng10303:4064671] [ 6] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/lib/ucx/libuct_ib.so.0(+0x5c1a0)[0x14b6bde511a0]
+[ng10303:4064671] [ 7] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/lib/libucs.so.0(+0x20799)[0x14b6bee37799]
+[ng10303:4064671] [ 8] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/lib/libucp.so.0(ucp_worker_progress+0x5a)[0x14b6beb7887a]
+[ng10303:4064671] [ 9] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libopen-pal.so.40(opal_progress+0x2c)[0x14b6c21e2f5c]
+[ng10303:4064671] [10] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libopen-pal.so.40(ompi_sync_wait_mt+0x105)[0x14b6c21e91a5]
+[ng10303:4064671] [11] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libmpi.so.40(ompi_request_default_wait_all+0x3d2)[0x14b6c243b162]
+[ng10303:4064671] [12] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libmpi.so.40(ompi_coll_base_bcast_intra_generic+0x4f5)[0x14b6c2496605]
+[ng10303:4064671] [13] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libmpi.so.40(ompi_coll_base_bcast_intra_bintree+0xac)[0x14b6c24968fc]
+[ng10303:4064671] [14] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libmpi.so.40(ompi_coll_tuned_bcast_intra_dec_fixed+0x3c)[0x14b6c24aba7c]
+[ng10303:4064671] [15] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libmpi.so.40(MPI_Bcast+0x116)[0x14b6c244e1b6]
+[ng10303:4064671] [16] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/mpi4py/4.0.3/lib/python3.11/site-packages/mpi4py/MPI.cpython-311-x86_64-linux-gnu.so(+0x119bad)[0x14b6c2791bad]
+[ng10303:4064671] [17] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(PyObject_Vectorcall+0x33)[0x14b6c3776393]
+[ng10303:4064671] [18] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(_PyEval_EvalFrameDefault+0x730)[0x14b6c3769c70]
+[ng10303:4064671] [19] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(+0x1b7d8a)[0x14b6c3765d8a]
+[ng10303:4064671] [20] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(PyEval_EvalCode+0x9f)[0x14b6c37edfef]
+[ng10303:4064671] [21] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(+0x25dc33)[0x14b6c380bc33]
+[ng10303:4064671] [22] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(+0x25a2ba)[0x14b6c38082ba]
+[ng10303:4064671] [23] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(+0x270492)[0x14b6c381e492]
+[ng10303:4064671] [24] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(_PyRun_SimpleFileObject+0x1a5)[0x14b6c381d3a5]
+[ng10303:4064671] [25] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(_PyRun_AnyFileObject+0x44)[0x14b6c381d074]
+[ng10303:4064671] [26] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(Py_RunMain+0x2e7)[0x14b6c3816fa7]
+[ng10303:4064671] [27] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(Py_BytesMain+0x37)[0x14b6c37de007]
+[ng10303:4064671] [28] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(+0x2394a)[0x14b6c32f894a]
+[ng10303:4064671] [29] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(__libc_start_main+0x85)[0x14b6c32f8a05]
+[ng10303:4064671] *** End of error message ***
+srun: error: ng10303: task 0: Aborted (core dumped)
