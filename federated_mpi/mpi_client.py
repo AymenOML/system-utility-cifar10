@@ -103,33 +103,35 @@ def compute_per_round_metrics(start_snapshot, end_snapshot):
 
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
-
     print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
-
-    #print(f"    [Client {rank}] Starting on host: {platform.node()}", flush=True)
-
 
     # 1. Load data in memory-map mode WITHOUT preprocessing
     (x_train_mmap, y_train_mmap), _ = load_and_preprocess_data(mmap_mode='r', preprocess=False)
 
-    # 2. Calculate the data slice for this client
     num_clients = comm.Get_size() - 1
     total_samples = x_train_mmap.shape[0]
-    samples_per_client = total_samples // num_clients
-    start = (rank - 1) * samples_per_client
-    end = start + samples_per_client
 
-    # 3. Slice the data and load ONLY the slice into memory
-    x_client = np.array(x_train_mmap[start:end])
-    y_client = np.array(y_train_mmap[start:end])
+    # 2. Unequal slicing via Dirichlet distribution
+    if rank == 1:
+        proportions = np.random.dirichlet(alpha=[0.5] * num_clients)
+        comm.bcast(proportions, root=1)
+    else:
+        proportions = comm.bcast(None, root=1)
 
-    # 4. Preprocess ONLY the client's local data
+    cumulative = np.cumsum(proportions)
+    start_idx = int(total_samples * cumulative[rank - 2]) if rank > 1 else 0
+    end_idx = int(total_samples * cumulative[rank - 1])
+
+    x_client = np.array(x_train_mmap[start_idx:end_idx])
+    y_client = np.array(y_train_mmap[start_idx:end_idx])
+
+    print(f"[Client {rank}] Assigned {x_client.shape[0]} samples (from {start_idx} to {end_idx})", flush=True)
+
+    # 3. Preprocess ONLY the client's local data
     x_client = x_client.astype('float32') / 255.0
     y_client = to_categorical(y_client, 10)
 
-    ### Change for number of rounds
     for round_num in range(1, NUM_ROUNDS + 1):
-
         model = build_cnn_model()
 
         print(f"    [Client {rank}] Round {round_num} - Waiting for global weights...", flush=True)
@@ -139,8 +141,8 @@ def run_client(comm, rank):
         print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
         start_snapshot = collect_system_metrics(rank, round_num)
         model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
-
         end_snapshot = collect_system_metrics(rank, round_num)
+
         metrics = compute_per_round_metrics(start_snapshot, end_snapshot)
         metrics.update({
             "client_rank": rank,
@@ -149,13 +151,8 @@ def run_client(comm, rank):
         })
         print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
 
-
         stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
         print(f"    [Client {rank}] Statistical Utility: {stats}", flush=True)
-
-
-        # metrics = collect_system_metrics(rank, round_num)
-        # print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
 
         updated_weights = serialize_weights(model.get_weights())
         print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
@@ -166,11 +163,10 @@ def run_client(comm, rank):
             print(f"[Client {rank}] Failed to send: {e}", flush=True)
 
         try:
-            comm.send(metrics, dest=0, tag=rank+100)
+            comm.send(metrics, dest=0, tag=rank + 100)
         except Exception as e:
             print(f"[Client {rank}] Failed to send: {e}", flush=True)
 
     print(f"    [Client {rank}] Training complete. Waiting for others...", flush=True)
     print(f"    [Client {rank}] Exiting.", flush=True)
     return
-
