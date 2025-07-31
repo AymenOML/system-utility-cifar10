@@ -105,18 +105,22 @@ def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
     print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
 
-    # 1. Load data in memory-map mode WITHOUT preprocessing
-    (x_train_mmap, y_train_mmap), _ = load_and_preprocess_data(mmap_mode='r', preprocess=False)
+    if rank == 0:
+        print(f"[Server {rank}] Nothing to do in run_client()", flush=True)
+        return
 
+    # === Client-specific logic ===
+    (x_train_mmap, y_train_mmap), _ = load_and_preprocess_data(mmap_mode='r', preprocess=False)
     num_clients = comm.Get_size() - 1
     total_samples = x_train_mmap.shape[0]
 
-    # 2. Unequal slicing via Dirichlet distribution
+    # Dirichlet-based unbalanced slicing
     if rank == 1:
         proportions = np.random.dirichlet(alpha=[0.5] * num_clients)
-        comm.bcast(proportions, root=1)
+        print(f"[Client {rank}] Generated proportions: {proportions}", flush=True)
     else:
-        proportions = comm.bcast(None, root=1)
+        proportions = None
+    proportions = comm.bcast(proportions, root=1)
 
     cumulative = np.cumsum(proportions)
     start_idx = int(total_samples * cumulative[rank - 2]) if rank > 1 else 0
@@ -127,7 +131,6 @@ def run_client(comm, rank):
 
     print(f"[Client {rank}] Assigned {x_client.shape[0]} samples (from {start_idx} to {end_idx})", flush=True)
 
-    # 3. Preprocess ONLY the client's local data
     x_client = x_client.astype('float32') / 255.0
     y_client = to_categorical(y_client, 10)
 
