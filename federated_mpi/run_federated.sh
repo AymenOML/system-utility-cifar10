@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=fed-cifar10
-#SBATCH --nodes=51                      # 1 server + 50 clients
-#SBATCH --ntasks=51                     # 1 MPI process per node
+#SBATCH --nodes=11                      # 1 server + 10 clients
+#SBATCH --ntasks=11                    # 1 MPI process per node
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-node=1              # Request 1 GPU per node (A100 on Narval)
 #SBATCH --cpus-per-task=8              # 8 CPU cores per process

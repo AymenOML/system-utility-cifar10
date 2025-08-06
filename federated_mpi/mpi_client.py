@@ -15,6 +15,31 @@ from config.config import NUM_ROUNDS
 from datetime import datetime
 import csv
 
+# For confusion matrix logging
+from sklearn.metrics import confusion_matrix
+import pandas as pd
+from pathlib import Path
+
+def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
+    """
+    Compute and log confusion matrix for the given data and model.
+    """
+    # Ensure folder exists
+    base_dir = Path("logs/confusion_matrices")
+    base_dir.mkdir(parents=True, exist_ok=True)
+    file_path = base_dir / f"client_{rank}.xlsx"
+
+    # Compute predictions
+    y_true = np.argmax(y_data_oh, axis=1)
+    y_pred = np.argmax(model.predict(x_data, verbose=0), axis=1)
+    cm = confusion_matrix(y_true, y_pred)
+
+    # Save to Excel
+    df_cm = pd.DataFrame(cm, index=[f"True {i}" for i in range(10)],
+                            columns=[f"Pred {i}" for i in range(10)])
+    with pd.ExcelWriter(file_path, engine='openpyxl', mode='a' if file_path.exists() else 'w') as writer:
+        df_cm.to_excel(writer, sheet_name=f"Round_{round_num}")
+
 def evaluate_keras_model(model, x, y):
     results = model.evaluate(x, y, verbose=0)
     loss = results[0]
@@ -156,6 +181,9 @@ def run_client(comm, rank):
 
         stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
         print(f"    [Client {rank}] Statistical Utility: {stats}", flush=True)
+
+        log_confusion_matrix(rank, round_num, model, x_client, y_client)
+        print(f"    [Client {rank}] Confusion matrix logged for round {round_num}", flush=True)
 
         updated_weights = serialize_weights(model.get_weights())
         print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
