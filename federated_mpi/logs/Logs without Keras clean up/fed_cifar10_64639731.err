@@ -1,2 +1,0 @@
-srun: fatal: SLURM_TRES_PER_TASK is mutually exclusive with --ntasks-per-gpu and SLURM_NTASKS_PER_GPU
-cp: cannot stat 'federated_metrics.png': No such file or directory
