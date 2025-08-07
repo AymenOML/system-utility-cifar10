@@ -1,0 +1,231 @@
+2025-08-06 15:03:30.936236: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-06 15:03:30.936010: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-06 15:03:30.939992: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-06 15:03:30.936323: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-06 15:03:30.936278: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-06 15:03:30.939648: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-06 15:03:30.936521: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-06 15:03:30.981450: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-06 15:03:30.993841: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-06 15:03:31.014056: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-06 15:03:31.086963: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-06 15:03:31.087036: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-06 15:03:31.086982: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-06 15:03:31.086961: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-06 15:03:31.087164: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-06 15:03:31.087042: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-06 15:03:31.087166: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-06 15:03:31.087168: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-06 15:03:31.101950: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-06 15:03:31.114572: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-06 15:03:31.138228: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-06 15:03:31.138370: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-06 15:03:31.139674: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-06 15:03:31.139762: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-06 15:03:31.139669: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-06 15:03:31.139687: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-06 15:03:31.139739: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-06 15:03:31.140032: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-06 15:03:31.142661: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-06 15:03:31.147561: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-06 15:03:31.572486: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-06 15:03:31.572595: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-06 15:03:31.573440: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-06 15:03:31.573583: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-06 15:03:31.573508: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-06 15:03:31.573298: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-06 15:03:31.574180: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-06 15:03:31.574229: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-06 15:03:31.574480: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-06 15:03:31.574943: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-06 15:03:32.083276: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-06 15:03:32.193798: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-06 15:03:32.228219: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-06 15:03:32.442924: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-06 15:03:34.510310: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-06 15:03:34.510343: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-06 15:03:34.510439: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-06 15:03:34.510533: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-06 15:03:34.510464: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-06 15:03:34.510595: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-06 15:03:34.510637: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-06 15:03:34.510349: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-06 15:03:34.516805: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-06 15:03:34.610729: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-06 15:03:34.618308: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 19, in <module>
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 19, in <module>
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 19, in <module>
+    from sklearn.metrics import confusion_matrix
+    from sklearn.metrics import confusion_matrix
+ModuleNotFoundError: No module named 'sklearn'
+ModuleNotFoundError: No module named 'sklearn'
+    from sklearn.metrics import confusion_matrix
+ModuleNotFoundError: No module named 'sklearn'
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 19, in <module>
+    from sklearn.metrics import confusion_matrix
+ModuleNotFoundError: No module named 'sklearn'
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 19, in <module>
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from sklearn.metrics import confusion_matrix
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 19, in <module>
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 19, in <module>
+ModuleNotFoundError: No module named 'sklearn'
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 19, in <module>
+    from sklearn.metrics import confusion_matrix
+    from sklearn.metrics import confusion_matrix
+ModuleNotFoundError: No module named 'sklearn'
+ModuleNotFoundError: No module named 'sklearn'
+    from sklearn.metrics import confusion_matrix
+ModuleNotFoundError: No module named 'sklearn'
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 19, in <module>
+    from sklearn.metrics import confusion_matrix
+ModuleNotFoundError: No module named 'sklearn'
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 11, in main
+    from mpi_client import run_client
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 19, in <module>
+    from sklearn.metrics import confusion_matrix
+ModuleNotFoundError: No module named 'sklearn'
+2025-08-06 15:03:39.279244: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:41:00.0, compute capability: 8.0
+srun: error: ng10609: task 5: Exited with exit code 1
+srun: error: ng10601: task 3: Exited with exit code 1
+srun: error: ng10502: task 1: Exited with exit code 1
+srun: error: ng10503: task 2: Exited with exit code 1
+srun: error: ng11001: task 6: Exited with exit code 1
+srun: error: ng20203: task 9: Exited with exit code 1
+srun: error: ng20204: task 10: Exited with exit code 1
+srun: error: ng11002: task 7: Exited with exit code 1
+srun: error: ng10607: task 4: Exited with exit code 1
+srun: error: ng11003: task 8: Exited with exit code 1
+[ng10501:166085:0:166085]       ud_ep.c:278  Fatal: UD endpoint 0x557c98a3f2c0 to <no debug data>: unhandled timeout error
+==== backtrace (tid: 166085) ====
+ 0 0x000000000005c1a0 uct_ud_ep_deferred_timeout_handler()  /tmp/ebuser/avx2/UCX/1.14.1/GCCcore-12.3.0/ucx-1.14.1/src/uct/ib/ud/base/ud_ep.c:278
+ 1 0x0000000000020799 ucs_callbackq_slow_proxy()  /tmp/ebuser/avx2/UCX/1.14.1/GCCcore-12.3.0/ucx-1.14.1/src/ucs/datastruct/callbackq.c:404
+ 2 0x000000000004487a ucs_callbackq_dispatch()  /tmp/ebuser/avx2/UCX/1.14.1/GCCcore-12.3.0/ucx-1.14.1/src/ucs/datastruct/callbackq.h:211
+ 3 0x000000000004487a uct_worker_progress()  /tmp/ebuser/avx2/UCX/1.14.1/GCCcore-12.3.0/ucx-1.14.1/src/uct/api/uct.h:2768
+ 4 0x000000000004487a ucp_worker_progress()  /tmp/ebuser/avx2/UCX/1.14.1/GCCcore-12.3.0/ucx-1.14.1/src/ucp/core/ucp_worker.c:2814
+ 5 0x0000000000033f5c opal_progress()  ???:0
+ 6 0x000000000003a1a5 ompi_sync_wait_mt()  ???:0
+ 7 0x000000000007b162 ompi_request_default_wait_all()  ???:0
+ 8 0x00000000000d6605 ompi_coll_base_bcast_intra_generic()  ???:0
+ 9 0x00000000000d68fc ompi_coll_base_bcast_intra_bintree()  ???:0
+10 0x00000000000eba7c ompi_coll_tuned_bcast_intra_dec_fixed()  ???:0
+11 0x000000000008e1b6 MPI_Bcast()  ???:0
+12 0x0000000000119bad PyMPI_Bcast_c()  /tmp/ebuser/avx2/mpi4py/4.0.3/gompi-2023a/mpi4py-4.0.3/src/lib-mpi/largecnt.h:619
+13 0x0000000000119bad __pyx_f_6mpi4py_3MPI_PyMPI_bcast()  /tmp/ebuser/avx2/mpi4py/4.0.3/gompi-2023a/mpi4py-4.0.3/src/mpi4py/MPI.c:111920
+14 0x0000000000119bad __pyx_pf_6mpi4py_3MPI_4Comm_276bcast()  /tmp/ebuser/avx2/mpi4py/4.0.3/gompi-2023a/mpi4py-4.0.3/src/mpi4py/MPI.c:203876
+15 0x0000000000119bad __pyx_pw_6mpi4py_3MPI_4Comm_277bcast()  /tmp/ebuser/avx2/mpi4py/4.0.3/gompi-2023a/mpi4py-4.0.3/src/mpi4py/MPI.c:203834
+16 0x00000000001c8393 _PyObject_VectorcallTstate()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/./Include/internal/pycore_call.h:92
+17 0x00000000001bbc70 _PyEval_EvalFrameDefault()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/ceval.c:4774
+18 0x00000000001b7d8a _PyEval_EvalFrame()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/./Include/internal/pycore_ceval.h:73
+19 0x00000000001b7d8a _PyEval_Vector()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/ceval.c:6444
+20 0x000000000023ffef PyEval_EvalCode()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/ceval.c:1154
+21 0x000000000025dc33 run_eval_code_obj()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/pythonrun.c:1712
+22 0x000000000025a2ba run_mod()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/pythonrun.c:1733
+23 0x0000000000270492 pyrun_file()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/pythonrun.c:1628
+24 0x000000000026f3a5 _PyRun_SimpleFileObject()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/pythonrun.c:440
+25 0x000000000026f074 _PyRun_AnyFileObject()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Python/pythonrun.c:79
+26 0x0000000000268fa7 pymain_run_file_obj()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Modules/main.c:360
+27 0x0000000000268fa7 pymain_run_file()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Modules/main.c:379
+28 0x0000000000268fa7 pymain_run_python()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Modules/main.c:601
+29 0x0000000000268fa7 Py_RunMain()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Modules/main.c:680
+30 0x0000000000230007 Py_BytesMain()  /tmp/ebuser/avx2/Python/3.11.5/GCCcore-12.3.0/Python-3.11.5/Modules/main.c:734
+31 0x000000000002394a __libc_init_first()  ???:0
+32 0x0000000000023a05 __libc_start_main()  ???:0
+33 0x0000000000001071 _start()  ???:0
+=================================
+[ng10501:166085] *** Process received signal ***
+[ng10501:166085] Signal: Aborted (6)
+[ng10501:166085] Signal code:  (-6)
+[ng10501:166085] [ 0] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(+0x38790)[0x148b87ceb790]
+[ng10501:166085] [ 1] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(+0x867ac)[0x148b87d397ac]
+[ng10501:166085] [ 2] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(gsignal+0x12)[0x148b87ceb6f2]
+[ng10501:166085] [ 3] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(abort+0xd3)[0x148b87cd54b2]
+[ng10501:166085] [ 4] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/lib/libucs.so.0(+0x26e2b)[0x148b7f4fce2b]
+[ng10501:166085] [ 5] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/lib/libucs.so.0(+0x26f11)[0x148b7f4fcf11]
+[ng10501:166085] [ 6] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/lib/ucx/libuct_ib.so.0(+0x5c1a0)[0x148b7e8311a0]
+[ng10501:166085] [ 7] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/lib/libucs.so.0(+0x20799)[0x148b7f4f6799]
+[ng10501:166085] [ 8] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/lib/libucp.so.0(ucp_worker_progress+0x5a)[0x148b7f57687a]
+[ng10501:166085] [ 9] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libopen-pal.so.40(opal_progress+0x2c)[0x148b86bc0f5c]
+[ng10501:166085] [10] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libopen-pal.so.40(ompi_sync_wait_mt+0x105)[0x148b86bc71a5]
+[ng10501:166085] [11] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libmpi.so.40(ompi_request_default_wait_all+0x3d2)[0x148b86e19162]
+[ng10501:166085] [12] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libmpi.so.40(ompi_coll_base_bcast_intra_generic+0x4f5)[0x148b86e74605]
+[ng10501:166085] [13] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libmpi.so.40(ompi_coll_base_bcast_intra_bintree+0xac)[0x148b86e748fc]
+[ng10501:166085] [14] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libmpi.so.40(ompi_coll_tuned_bcast_intra_dec_fixed+0x3c)[0x148b86e89a7c]
+[ng10501:166085] [15] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/lib/libmpi.so.40(MPI_Bcast+0x116)[0x148b86e2c1b6]
+[ng10501:166085] [16] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/mpi4py/4.0.3/lib/python3.11/site-packages/mpi4py/MPI.cpython-311-x86_64-linux-gnu.so(+0x119bad)[0x148b8716fbad]
+[ng10501:166085] [17] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(PyObject_Vectorcall+0x33)[0x148b88154393]
+[ng10501:166085] [18] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(_PyEval_EvalFrameDefault+0x730)[0x148b88147c70]
+[ng10501:166085] [19] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(+0x1b7d8a)[0x148b88143d8a]
+[ng10501:166085] [20] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(PyEval_EvalCode+0x9f)[0x148b881cbfef]
+[ng10501:166085] [21] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(+0x25dc33)[0x148b881e9c33]
+[ng10501:166085] [22] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(+0x25a2ba)[0x148b881e62ba]
+[ng10501:166085] [23] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(+0x270492)[0x148b881fc492]
+[ng10501:166085] [24] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(_PyRun_SimpleFileObject+0x1a5)[0x148b881fb3a5]
+[ng10501:166085] [25] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(_PyRun_AnyFileObject+0x44)[0x148b881fb074]
+[ng10501:166085] [26] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(Py_RunMain+0x2e7)[0x148b881f4fa7]
+[ng10501:166085] [27] /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.11.5/lib/libpython3.11.so.1.0(Py_BytesMain+0x37)[0x148b881bc007]
+[ng10501:166085] [28] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(+0x2394a)[0x148b87cd694a]
+[ng10501:166085] [29] /cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/lib64/libc.so.6(__libc_start_main+0x85)[0x148b87cd6a05]
+[ng10501:166085] *** End of error message ***
+srun: error: ng10501: task 0: Aborted (core dumped)
