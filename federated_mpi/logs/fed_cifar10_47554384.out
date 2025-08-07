@@ -1,9 +1,0 @@
-=== Federated Server Started ===
-Total processes: 11 (1 server + 10 clients)
-
-Loading data from .npy files...
-Training set: (50000, 32, 32, 3), Labels: (50000, 10)
-Test set:     (10000, 32, 32, 3), Labels: (10000, 10)
-
-===== Round 1 =====
-Broadcasting global model to all clients...
