@@ -62,10 +62,10 @@ def log_statistical_utility_tf(rank, round_num, x, y, model):
 def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
     """
     Compute and log confusion matrix for the given data and model.
-    This version saves the matrix as a CSV file instead of Excel.
+    Saves the matrix as a CSV file inside a client-specific subfolder.
     """
-    # Ensure folder exists
-    base_dir = Path("logs/confusion_csv")
+    # Ensure base folder exists
+    base_dir = Path("logs/confusion_csv") / f"client_{rank}"
     base_dir.mkdir(parents=True, exist_ok=True)
 
     # Compute predictions
@@ -73,9 +73,10 @@ def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
     y_pred = np.argmax(model.predict(x_data, batch_size=256, verbose=0), axis=1)
     cm = confusion_matrix(y_true, y_pred)
 
-    # Save to CSV file
-    csv_path = base_dir / f"client_{rank}_round_{round_num}.csv"
+    # Save to CSV file inside client-specific folder
+    csv_path = base_dir / f"round_{round_num}.csv"
     np.savetxt(csv_path, cm, fmt='%d', delimiter=',')
+
 
 def collect_system_metrics(rank, round_num):
     # This gets the current Python process
