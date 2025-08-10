@@ -17,28 +17,7 @@ import csv
 
 # For confusion matrix logging
 from sklearn.metrics import confusion_matrix
-import pandas as pd
 from pathlib import Path
-
-def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
-    """
-    Compute and log confusion matrix for the given data and model.
-    """
-    # Ensure folder exists
-    base_dir = Path("logs/confusion_matrices")
-    base_dir.mkdir(parents=True, exist_ok=True)
-    file_path = base_dir / f"client_{rank}.xlsx"
-
-    # Compute predictions
-    y_true = np.argmax(y_data_oh, axis=1)
-    y_pred = np.argmax(model.predict(x_data, verbose=0), axis=1)
-    cm = confusion_matrix(y_true, y_pred)
-
-    # Save to Excel
-    df_cm = pd.DataFrame(cm, index=[f"True {i}" for i in range(10)],
-                            columns=[f"Pred {i}" for i in range(10)])
-    with pd.ExcelWriter(file_path, engine='openpyxl', mode='a' if file_path.exists() else 'w') as writer:
-        df_cm.to_excel(writer, sheet_name=f"Round_{round_num}")
 
 def evaluate_keras_model(model, x, y):
     results = model.evaluate(x, y, verbose=0)
@@ -80,7 +59,23 @@ def log_statistical_utility_tf(rank, round_num, x, y, model):
         "local_accuracy": local_accuracy
     }
 
+def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
+    """
+    Compute and log confusion matrix for the given data and model.
+    This version saves the matrix as a CSV file instead of Excel.
+    """
+    # Ensure folder exists
+    base_dir = Path("logs/confusion_csv")
+    base_dir.mkdir(parents=True, exist_ok=True)
 
+    # Compute predictions
+    y_true = np.argmax(y_data_oh, axis=1)
+    y_pred = np.argmax(model.predict(x_data, batch_size=256, verbose=0), axis=1)
+    cm = confusion_matrix(y_true, y_pred)
+
+    # Save to CSV file
+    csv_path = base_dir / f"client_{rank}_round_{round_num}.csv"
+    np.savetxt(csv_path, cm, fmt='%d', delimiter=',')
 
 def collect_system_metrics(rank, round_num):
     # This gets the current Python process
@@ -124,7 +119,6 @@ def compute_per_round_metrics(start_snapshot, end_snapshot):
         "gpu_mem_used_mb": end_snapshot["gpu_mem_used_mb"],
         "gpu_load": end_snapshot["gpu_load"]
     }
-
 
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
@@ -182,8 +176,8 @@ def run_client(comm, rank):
         stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
         print(f"    [Client {rank}] Statistical Utility: {stats}", flush=True)
 
+        # New: Confusion matrix logging as CSV
         log_confusion_matrix(rank, round_num, model, x_client, y_client)
-        print(f"    [Client {rank}] Confusion matrix logged for round {round_num}", flush=True)
 
         updated_weights = serialize_weights(model.get_weights())
         print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
