@@ -68,22 +68,30 @@ def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
     base_dir = Path("logs/confusion_csv") / f"client_{rank}"
     base_dir.mkdir(parents=True, exist_ok=True)
 
+    # PATCH: guard against empty inputs
+    if x_data is None or x_data.shape[0] == 0:
+        return
+    if y_data_oh is None or y_data_oh.shape[0] == 0:
+        return
+
     # Compute predictions
     y_true = np.argmax(y_data_oh, axis=1)
     y_pred = np.argmax(model.predict(x_data, batch_size=256, verbose=0), axis=1)
     cm = confusion_matrix(y_true, y_pred)
 
-    # Save to CSV file inside client-specific folder
-    csv_path = base_dir / f"round_{round_num}.csv"
-    np.savetxt(csv_path, cm, fmt='%d', delimiter=',')
-
+    # Save confusion matrix as CSV (tidy or full matrix as needed)
+    out_path = base_dir / f"round_{round_num}.csv"
+    np.savetxt(out_path, cm, delimiter=",", fmt="%d")
 
 def collect_system_metrics(rank, round_num):
-    # This gets the current Python process
+    """
+    Snapshot of per-process and system usage. Called before and after training to diff.
+    """
     p = psutil.Process(os.getpid())
-    
     cpu_times = psutil.cpu_times()
-    cpu_freq = psutil.cpu_freq().current
+    # PATCH: psutil.cpu_freq() can return None on some systems
+    freq_obj = psutil.cpu_freq()
+    cpu_freq = float(freq_obj.current) if (freq_obj and getattr(freq_obj, 'current', None) is not None) else None
     # Get this process's memory usage (RSS: Resident Set Size)
     ram_used = p.memory_info().rss / 1e6
     net = psutil.net_io_counters()
@@ -154,12 +162,39 @@ def run_client(comm, rank):
     x_client = x_client.astype('float32') / 255.0
     y_client = to_categorical(y_client, 10)
 
+    # PATCH: guard for empty local shard
+    has_data = x_client.shape[0] > 0
+
     for round_num in range(1, NUM_ROUNDS + 1):
         model = build_cnn_model()
 
         print(f"    [Client {rank}] Round {round_num} - Waiting for global weights...", flush=True)
         global_weights = comm.bcast(None, root=0)
         model.set_weights(global_weights)
+
+        # PATCH: skip training if no local data
+        if not has_data:
+            print(f"    [Client {rank}] No local samples for this client — skipping training.", flush=True)
+            start_snapshot = collect_system_metrics(rank, round_num)
+            end_snapshot = collect_system_metrics(rank, round_num)
+            metrics = compute_per_round_metrics(start_snapshot, end_snapshot)
+            metrics.update({
+                "client_rank": rank,
+                "round": round_num,
+                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "skipped": True
+            })
+            updated_weights = serialize_weights(global_weights)
+            print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
+            try:
+                comm.send(updated_weights, dest=0, tag=rank)
+            except Exception as e:
+                print(f"[Client {rank}] Failed to send: {e}", flush=True)
+            try:
+                comm.send(metrics, dest=0, tag=rank + 100)
+            except Exception as e:
+                print(f"[Client {rank}] Failed to send: {e}", flush=True)
+            continue
 
         print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
         start_snapshot = collect_system_metrics(rank, round_num)
@@ -177,8 +212,11 @@ def run_client(comm, rank):
         stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
         print(f"    [Client {rank}] Statistical Utility: {stats}", flush=True)
 
-        # New: Confusion matrix logging as CSV
-        log_confusion_matrix(rank, round_num, model, x_client, y_client)
+        # Save confusion matrix (guarded)
+        try:
+            log_confusion_matrix(rank, round_num, model, x_client, y_client)
+        except Exception as e:
+            print(f"    [Client {rank}] Confusion matrix logging skipped: {e}", flush=True)
 
         updated_weights = serialize_weights(model.get_weights())
         print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
