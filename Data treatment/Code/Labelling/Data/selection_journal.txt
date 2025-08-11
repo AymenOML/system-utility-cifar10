@@ -1,0 +1,749 @@
+=== Round 1 ===
+Per-round medians:
+  - confusion_mean: 0.114101
+  - cpu_time: 0.087584
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.000000
+  - local_accuracy: 0.098734
+  - local_loss: 0.754206
+  - net_recv_bytes: 0.267071
+  - net_sent_bytes: 0.187659
+  - ram_used_mb: 0.016528
+Selected clients (3/10): [2, 5, 10]
+
+=== Round 2 ===
+Per-round medians:
+  - confusion_mean: 0.115437
+  - cpu_time: 0.053647
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.032258
+  - local_accuracy: 0.135552
+  - local_loss: 0.744877
+  - net_recv_bytes: 0.207816
+  - net_sent_bytes: 0.106770
+  - ram_used_mb: 0.044134
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 3 ===
+Per-round medians:
+  - confusion_mean: 0.123303
+  - cpu_time: 0.067304
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.064516
+  - local_accuracy: 0.352434
+  - local_loss: 0.519046
+  - net_recv_bytes: 0.155604
+  - net_sent_bytes: 0.092927
+  - ram_used_mb: 0.064419
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 4 ===
+Per-round medians:
+  - confusion_mean: 0.126912
+  - cpu_time: 0.053710
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.064516
+  - local_accuracy: 0.430255
+  - local_loss: 0.454215
+  - net_recv_bytes: 0.194511
+  - net_sent_bytes: 0.121474
+  - ram_used_mb: 0.084737
+Selected clients (2/10): [1, 4]
+
+=== Round 5 ===
+Per-round medians:
+  - confusion_mean: 0.113364
+  - cpu_time: 0.056461
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.096774
+  - local_accuracy: 0.506837
+  - local_loss: 0.397871
+  - net_recv_bytes: 0.219568
+  - net_sent_bytes: 0.124158
+  - ram_used_mb: 0.103666
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 6 ===
+Per-round medians:
+  - confusion_mean: 0.114390
+  - cpu_time: 0.053700
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.129032
+  - local_accuracy: 0.568277
+  - local_loss: 0.344838
+  - net_recv_bytes: 0.157318
+  - net_sent_bytes: 0.118893
+  - ram_used_mb: 0.124327
+Selected clients (2/10): [2, 4]
+
+=== Round 7 ===
+Per-round medians:
+  - confusion_mean: 0.113940
+  - cpu_time: 0.055392
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.129032
+  - local_accuracy: 0.597264
+  - local_loss: 0.320714
+  - net_recv_bytes: 0.192221
+  - net_sent_bytes: 0.116762
+  - ram_used_mb: 0.139749
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 8 ===
+Per-round medians:
+  - confusion_mean: 0.109974
+  - cpu_time: 0.052102
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.161290
+  - local_accuracy: 0.636640
+  - local_loss: 0.293124
+  - net_recv_bytes: 0.150853
+  - net_sent_bytes: 0.123758
+  - ram_used_mb: 0.163608
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 9 ===
+Per-round medians:
+  - confusion_mean: 0.105212
+  - cpu_time: 0.054683
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.161290
+  - local_accuracy: 0.668324
+  - local_loss: 0.268348
+  - net_recv_bytes: 0.194919
+  - net_sent_bytes: 0.134718
+  - ram_used_mb: 0.180037
+Selected clients (5/10): [1, 2, 3, 4, 10]
+
+=== Round 10 ===
+Per-round medians:
+  - confusion_mean: 0.105978
+  - cpu_time: 0.052779
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.193548
+  - local_accuracy: 0.676144
+  - local_loss: 0.264258
+  - net_recv_bytes: 0.125946
+  - net_sent_bytes: 0.046342
+  - ram_used_mb: 0.202191
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 11 ===
+Per-round medians:
+  - confusion_mean: 0.104887
+  - cpu_time: 0.052155
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.225806
+  - local_accuracy: 0.695324
+  - local_loss: 0.243758
+  - net_recv_bytes: 0.124553
+  - net_sent_bytes: 0.121342
+  - ram_used_mb: 0.223802
+Selected clients (4/10): [1, 2, 4, 5]
+
+=== Round 12 ===
+Per-round medians:
+  - confusion_mean: 0.105569
+  - cpu_time: 0.059539
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.225806
+  - local_accuracy: 0.723363
+  - local_loss: 0.226389
+  - net_recv_bytes: 0.220635
+  - net_sent_bytes: 0.144189
+  - ram_used_mb: 0.234797
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 13 ===
+Per-round medians:
+  - confusion_mean: 0.105663
+  - cpu_time: 0.053213
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.258065
+  - local_accuracy: 0.729200
+  - local_loss: 0.218723
+  - net_recv_bytes: 0.126591
+  - net_sent_bytes: 0.101207
+  - ram_used_mb: 0.254681
+Selected clients (4/10): [1, 2, 4, 10]
+
+=== Round 14 ===
+Per-round medians:
+  - confusion_mean: 0.104008
+  - cpu_time: 0.053615
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.274194
+  - local_accuracy: 0.747660
+  - local_loss: 0.207180
+  - net_recv_bytes: 0.160720
+  - net_sent_bytes: 0.128891
+  - ram_used_mb: 0.278409
+Selected clients (4/10): [1, 2, 4, 7]
+
+=== Round 15 ===
+Per-round medians:
+  - confusion_mean: 0.103902
+  - cpu_time: 0.091435
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.290323
+  - local_accuracy: 0.750780
+  - local_loss: 0.199481
+  - net_recv_bytes: 0.363737
+  - net_sent_bytes: 0.132900
+  - ram_used_mb: 0.289943
+Selected clients (3/10): [1, 2, 3]
+
+=== Round 16 ===
+Per-round medians:
+  - confusion_mean: 0.103210
+  - cpu_time: 0.045575
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.322581
+  - local_accuracy: 0.774854
+  - local_loss: 0.191657
+  - net_recv_bytes: 0.095561
+  - net_sent_bytes: 0.059084
+  - ram_used_mb: 0.310601
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 17 ===
+Per-round medians:
+  - confusion_mean: 0.105989
+  - cpu_time: 0.045300
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.322581
+  - local_accuracy: 0.776627
+  - local_loss: 0.179404
+  - net_recv_bytes: 0.165369
+  - net_sent_bytes: 0.100109
+  - ram_used_mb: 0.327503
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 18 ===
+Per-round medians:
+  - confusion_mean: 0.102230
+  - cpu_time: 0.046844
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.354839
+  - local_accuracy: 0.779226
+  - local_loss: 0.182022
+  - net_recv_bytes: 0.210936
+  - net_sent_bytes: 0.130303
+  - ram_used_mb: 0.352355
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 19 ===
+Per-round medians:
+  - confusion_mean: 0.101433
+  - cpu_time: 0.055953
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.370968
+  - local_accuracy: 0.789745
+  - local_loss: 0.173730
+  - net_recv_bytes: 0.163846
+  - net_sent_bytes: 0.111311
+  - ram_used_mb: 0.364494
+Selected clients (4/10): [1, 2, 4, 5]
+
+=== Round 20 ===
+Per-round medians:
+  - confusion_mean: 0.102304
+  - cpu_time: 0.052493
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.387097
+  - local_accuracy: 0.803309
+  - local_loss: 0.161746
+  - net_recv_bytes: 0.118492
+  - net_sent_bytes: 0.091820
+  - ram_used_mb: 0.385607
+Selected clients (4/10): [1, 2, 4, 10]
+
+=== Round 21 ===
+Per-round medians:
+  - confusion_mean: 0.102143
+  - cpu_time: 0.052769
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.419355
+  - local_accuracy: 0.803885
+  - local_loss: 0.158592
+  - net_recv_bytes: 0.173066
+  - net_sent_bytes: 0.104069
+  - ram_used_mb: 0.408973
+Selected clients (3/10): [2, 4, 5]
+
+=== Round 22 ===
+Per-round medians:
+  - confusion_mean: 0.101911
+  - cpu_time: 0.053869
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.419355
+  - local_accuracy: 0.826731
+  - local_loss: 0.147683
+  - net_recv_bytes: 0.121534
+  - net_sent_bytes: 0.092292
+  - ram_used_mb: 0.432021
+Selected clients (4/10): [2, 3, 4, 6]
+
+=== Round 23 ===
+Per-round medians:
+  - confusion_mean: 0.100813
+  - cpu_time: 0.053657
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.451613
+  - local_accuracy: 0.815345
+  - local_loss: 0.152019
+  - net_recv_bytes: 0.197709
+  - net_sent_bytes: 0.144006
+  - ram_used_mb: 0.447585
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 24 ===
+Per-round medians:
+  - confusion_mean: 0.100437
+  - cpu_time: 0.058661
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.483871
+  - local_accuracy: 0.819246
+  - local_loss: 0.148838
+  - net_recv_bytes: 0.110445
+  - net_sent_bytes: 0.060855
+  - ram_used_mb: 0.461973
+Selected clients (4/10): [1, 2, 4, 5]
+
+=== Round 25 ===
+Per-round medians:
+  - confusion_mean: 0.099184
+  - cpu_time: 0.052261
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.483871
+  - local_accuracy: 0.838818
+  - local_loss: 0.136172
+  - net_recv_bytes: 0.200098
+  - net_sent_bytes: 0.093776
+  - ram_used_mb: 0.480763
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 26 ===
+Per-round medians:
+  - confusion_mean: 0.100362
+  - cpu_time: 0.052578
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.516129
+  - local_accuracy: 0.855693
+  - local_loss: 0.127759
+  - net_recv_bytes: 0.149696
+  - net_sent_bytes: 0.101495
+  - ram_used_mb: 0.503694
+Selected clients (4/10): [1, 2, 4, 5]
+
+=== Round 27 ===
+Per-round medians:
+  - confusion_mean: 0.099969
+  - cpu_time: 0.051848
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.516129
+  - local_accuracy: 0.853114
+  - local_loss: 0.124013
+  - net_recv_bytes: 0.165788
+  - net_sent_bytes: 0.069601
+  - ram_used_mb: 0.525389
+Selected clients (4/10): [1, 2, 3, 4]
+
+=== Round 28 ===
+Per-round medians:
+  - confusion_mean: 0.100002
+  - cpu_time: 0.053573
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.548387
+  - local_accuracy: 0.848444
+  - local_loss: 0.123907
+  - net_recv_bytes: 0.183748
+  - net_sent_bytes: 0.132193
+  - ram_used_mb: 0.540716
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 29 ===
+Per-round medians:
+  - confusion_mean: 0.101208
+  - cpu_time: 0.060671
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.580645
+  - local_accuracy: 0.861704
+  - local_loss: 0.118822
+  - net_recv_bytes: 0.202241
+  - net_sent_bytes: 0.100281
+  - ram_used_mb: 0.553681
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 30 ===
+Per-round medians:
+  - confusion_mean: 0.100077
+  - cpu_time: 0.053647
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.580645
+  - local_accuracy: 0.856131
+  - local_loss: 0.117323
+  - net_recv_bytes: 0.184581
+  - net_sent_bytes: 0.084546
+  - ram_used_mb: 0.571311
+Selected clients (3/10): [1, 4, 10]
+
+=== Round 31 ===
+Per-round medians:
+  - confusion_mean: 0.099468
+  - cpu_time: 0.051912
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.612903
+  - local_accuracy: 0.850522
+  - local_loss: 0.124345
+  - net_recv_bytes: 0.094553
+  - net_sent_bytes: 0.016712
+  - ram_used_mb: 0.594546
+Selected clients (4/10): [1, 2, 4, 5]
+
+=== Round 32 ===
+Per-round medians:
+  - confusion_mean: 0.099605
+  - cpu_time: 0.042549
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.629032
+  - local_accuracy: 0.862320
+  - local_loss: 0.117236
+  - net_recv_bytes: 0.089425
+  - net_sent_bytes: 0.097605
+  - ram_used_mb: 0.616553
+Selected clients (3/10): [1, 7, 10]
+
+=== Round 33 ===
+Per-round medians:
+  - confusion_mean: 0.100491
+  - cpu_time: 0.044707
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.645161
+  - local_accuracy: 0.881996
+  - local_loss: 0.102974
+  - net_recv_bytes: 0.100071
+  - net_sent_bytes: 0.094013
+  - ram_used_mb: 0.636601
+Selected clients (3/10): [1, 5, 10]
+
+=== Round 34 ===
+Per-round medians:
+  - confusion_mean: 0.098889
+  - cpu_time: 0.049743
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.677419
+  - local_accuracy: 0.872143
+  - local_loss: 0.109486
+  - net_recv_bytes: 0.177852
+  - net_sent_bytes: 0.094596
+  - ram_used_mb: 0.650125
+Selected clients (4/10): [1, 2, 3, 4]
+
+=== Round 35 ===
+Per-round medians:
+  - confusion_mean: 0.100549
+  - cpu_time: 0.046210
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.677419
+  - local_accuracy: 0.878687
+  - local_loss: 0.103059
+  - net_recv_bytes: 0.171828
+  - net_sent_bytes: 0.106772
+  - ram_used_mb: 0.658857
+Selected clients (4/10): [1, 2, 5, 7]
+
+=== Round 36 ===
+Per-round medians:
+  - confusion_mean: 0.099141
+  - cpu_time: 0.043967
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.709677
+  - local_accuracy: 0.881812
+  - local_loss: 0.101058
+  - net_recv_bytes: 0.102151
+  - net_sent_bytes: 0.098667
+  - ram_used_mb: 0.680544
+Selected clients (2/10): [1, 2]
+
+=== Round 37 ===
+Per-round medians:
+  - confusion_mean: 0.099521
+  - cpu_time: 0.043829
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.725806
+  - local_accuracy: 0.884898
+  - local_loss: 0.097279
+  - net_recv_bytes: 0.194454
+  - net_sent_bytes: 0.119780
+  - ram_used_mb: 0.703379
+Selected clients (5/10): [1, 2, 3, 4, 7]
+
+=== Round 38 ===
+Per-round medians:
+  - confusion_mean: 0.097860
+  - cpu_time: 0.048516
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.741935
+  - local_accuracy: 0.879523
+  - local_loss: 0.099242
+  - net_recv_bytes: 0.296345
+  - net_sent_bytes: 0.108713
+  - ram_used_mb: 0.723531
+Selected clients (4/10): [1, 2, 4, 5]
+
+=== Round 39 ===
+Per-round medians:
+  - confusion_mean: 0.098114
+  - cpu_time: 0.053202
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.774194
+  - local_accuracy: 0.897720
+  - local_loss: 0.086747
+  - net_recv_bytes: 0.155850
+  - net_sent_bytes: 0.035333
+  - ram_used_mb: 0.748651
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 40 ===
+Per-round medians:
+  - confusion_mean: 0.097337
+  - cpu_time: 0.053033
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.774194
+  - local_accuracy: 0.893183
+  - local_loss: 0.091096
+  - net_recv_bytes: 0.095707
+  - net_sent_bytes: 0.016253
+  - ram_used_mb: 0.769247
+Selected clients (4/10): [1, 2, 4, 5]
+
+=== Round 41 ===
+Per-round medians:
+  - confusion_mean: 0.099150
+  - cpu_time: 0.059201
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.806452
+  - local_accuracy: 0.898173
+  - local_loss: 0.087852
+  - net_recv_bytes: 0.148878
+  - net_sent_bytes: 0.120867
+  - ram_used_mb: 0.775614
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 42 ===
+Per-round medians:
+  - confusion_mean: 0.097948
+  - cpu_time: 0.061835
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.822581
+  - local_accuracy: 0.895373
+  - local_loss: 0.088973
+  - net_recv_bytes: 0.140234
+  - net_sent_bytes: 0.107169
+  - ram_used_mb: 0.784906
+Selected clients (4/10): [1, 3, 4, 6]
+
+=== Round 43 ===
+Per-round medians:
+  - confusion_mean: 0.098513
+  - cpu_time: 0.080084
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.838710
+  - local_accuracy: 0.907986
+  - local_loss: 0.078280
+  - net_recv_bytes: 0.115711
+  - net_sent_bytes: 0.067309
+  - ram_used_mb: 0.803781
+Selected clients (4/10): [1, 2, 3, 4]
+
+=== Round 44 ===
+Per-round medians:
+  - confusion_mean: 0.099326
+  - cpu_time: 0.050843
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.870968
+  - local_accuracy: 0.897351
+  - local_loss: 0.085098
+  - net_recv_bytes: 0.136527
+  - net_sent_bytes: 0.007256
+  - ram_used_mb: 0.829983
+Selected clients (3/10): [1, 4, 5]
+
+=== Round 45 ===
+Per-round medians:
+  - confusion_mean: 0.097608
+  - cpu_time: 0.054980
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.887097
+  - local_accuracy: 0.906119
+  - local_loss: 0.079904
+  - net_recv_bytes: 0.214448
+  - net_sent_bytes: 0.138933
+  - ram_used_mb: 0.853633
+Selected clients (4/10): [1, 2, 4, 7]
+
+=== Round 46 ===
+Per-round medians:
+  - confusion_mean: 0.097467
+  - cpu_time: 0.053128
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.903226
+  - local_accuracy: 0.902675
+  - local_loss: 0.082785
+  - net_recv_bytes: 0.094571
+  - net_sent_bytes: 0.017508
+  - ram_used_mb: 0.870687
+Selected clients (3/10): [1, 4, 5]
+
+=== Round 47 ===
+Per-round medians:
+  - confusion_mean: 0.097556
+  - cpu_time: 0.053700
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.919355
+  - local_accuracy: 0.918861
+  - local_loss: 0.073292
+  - net_recv_bytes: 0.228386
+  - net_sent_bytes: 0.095367
+  - ram_used_mb: 0.896649
+Selected clients (3/10): [1, 2, 4]
+
+=== Round 48 ===
+Per-round medians:
+  - confusion_mean: 0.098906
+  - cpu_time: 0.054303
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.935484
+  - local_accuracy: 0.924844
+  - local_loss: 0.066143
+  - net_recv_bytes: 0.124409
+  - net_sent_bytes: 0.118184
+  - ram_used_mb: 0.919688
+Selected clients (5/10): [1, 2, 3, 4, 10]
+
+=== Round 49 ===
+Per-round medians:
+  - confusion_mean: 0.097777
+  - cpu_time: 0.064987
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.967742
+  - local_accuracy: 0.919285
+  - local_loss: 0.066976
+  - net_recv_bytes: 0.198224
+  - net_sent_bytes: 0.087429
+  - ram_used_mb: 0.915750
+Selected clients (4/10): [1, 2, 3, 4]
+
+=== Round 50 ===
+Per-round medians:
+  - confusion_mean: 0.098537
+  - cpu_time: 0.065633
+  - data_size: 0.344489
+  - data_variance: 0.188536
+  - gpu_load: 0.000000
+  - gpu_mem_used_mb: 0.983871
+  - local_accuracy: 0.921477
+  - local_loss: 0.068541
+  - net_recv_bytes: 0.129951
+  - net_sent_bytes: 0.098300
+  - ram_used_mb: 0.932428
+Selected clients (4/10): [1, 2, 3, 4]
