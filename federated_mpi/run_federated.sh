@@ -4,7 +4,7 @@
 #SBATCH --ntasks=51                    # 1 MPI process per node
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-node=1              # Request 1 GPU per node (A100 on Narval)
-#SBATCH --cpus-per-task=8              # 8 CPU cores per process
+#SBATCH --cpus-per-task=8              # 8 CPU cores per processgit
 #SBATCH --mem-per-cpu=4G               # 32 GB per process (8 x 4)
 #SBATCH --time=0-12:00:00
 #SBATCH --output=logs/fed_cifar10_%j.out
