@@ -1,0 +1,866 @@
+2025-08-11 08:32:50.389225: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.389947: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.390329: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.390552: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.390690: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.390763: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.390784: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.390940: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.391500: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.391898: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.392193: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.392399: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.392744: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.393405: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.394186: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.394339: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.394492: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.394437: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.394781: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.395113: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.395466: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.395400: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.395536: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.395557: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.395716: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.395840: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.395984: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.395936: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.395984: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.396250: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.396148: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.396223: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.396477: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.396293: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.396426: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.396468: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.396626: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.396730: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.397099: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.397289: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.397344: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.397437: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.399323: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.401442: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.419736: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.444868: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.476278: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.479747: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.514485: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.514955: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:50.554052: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554005: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.553973: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554249: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.553905: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554097: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554127: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554147: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554109: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554151: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554189: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554159: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554276: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554501: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554117: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554245: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554298: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554201: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554156: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554195: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554280: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554242: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554220: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554238: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554203: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554327: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554156: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554174: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554286: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554394: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554274: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554386: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554408: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554363: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554305: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554516: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554306: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554189: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554448: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554405: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554555: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554241: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554424: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554471: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.554510: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.587678: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.618947: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.621255: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.621240: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.621721: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.622344: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.623069: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.623164: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.623275: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.623613: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.623312: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.623314: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.623606: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624069: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.623935: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.623969: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624159: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624295: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624296: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624134: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624305: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624378: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624397: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624480: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624623: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624540: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.624710: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624704: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.624960: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.625219: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.625133: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.625448: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.625487: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.625570: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.625714: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626138: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626147: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626121: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626188: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626294: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626248: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626288: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626458: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626504: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626620: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626441: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626715: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.626977: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.632629: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.658221: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.663910: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:50.668298: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.676211: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.708516: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.716668: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:50.870321: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-08-11 08:32:51.000307: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-08-11 08:32:51.041496: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-08-11 08:32:51.098486: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.098529: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.098680: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.098913: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.098999: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.099203: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.099417: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.099589: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.099559: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.099962: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100027: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100235: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100433: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100328: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100385: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100489: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100551: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100640: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100509: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100744: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100679: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100763: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.100942: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.101243: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.101501: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.101594: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.101757: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.101698: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.101735: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.101709: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.101734: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.101866: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.101846: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.101892: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102137: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102225: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102183: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102253: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102066: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102262: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102259: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102298: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102402: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102441: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102561: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102709: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102734: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.102896: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.103098: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.118138: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:51.275281: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-11 08:32:54.129665: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.129682: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.129527: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.129786: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.129602: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.129823: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.129838: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.129899: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.129892: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130071: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.129801: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130052: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130065: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130150: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130261: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130142: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130236: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130340: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130275: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130301: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130313: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130669: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130402: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130392: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130451: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130402: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130423: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130743: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130730: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130716: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130699: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130700: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130863: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130731: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130969: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.130986: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.131147: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.131235: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.131137: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.131204: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.131262: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.131213: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.131307: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.131425: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.131594: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.131555: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.131724: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.132031: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.134814: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:54.156578: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-08-11 08:32:55.431696: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-08-11 08:33:00.750004: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-08-11 08:33:01.884639: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-08-11 08:33:01.939149: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.015246: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.026100: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.026157: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.030579: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.038919: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:41:00.0, compute capability: 8.0
+2025-08-11 08:33:02.041017: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:c1:00.0, compute capability: 8.0
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-08-11 08:33:02.056134: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.057234: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.066493: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.087254: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.099857: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.101149: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:c1:00.0, compute capability: 8.0
+2025-08-11 08:33:02.106294: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.106624: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:c1:00.0, compute capability: 8.0
+2025-08-11 08:33:02.115024: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.115700: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.116659: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:41:00.0, compute capability: 8.0
+2025-08-11 08:33:02.120983: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.128924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.142801: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:41:00.0, compute capability: 8.0
+2025-08-11 08:33:02.162317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.168213: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.168643: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.168564: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.181613: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:41:00.0, compute capability: 8.0
+2025-08-11 08:33:02.213782: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:41:00.0, compute capability: 8.0
+2025-08-11 08:33:02.217757: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.224145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.239297: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.250705: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.269702: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.270330: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.281879: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.318763: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.324721: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:c1:00.0, compute capability: 8.0
+2025-08-11 08:33:02.335883: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.337770: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.349574: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:c1:00.0, compute capability: 8.0
+2025-08-11 08:33:02.350997: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.378622: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.399987: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.449106: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.460084: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.469402: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:81:00.0, compute capability: 8.0
+2025-08-11 08:33:02.511807: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:c1:00.0, compute capability: 8.0
+2025-08-11 08:33:02.530876: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:01:00.0, compute capability: 8.0
+2025-08-11 08:33:02.595317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:c1:00.0, compute capability: 8.0
+2025-08-11 08:33:02.605951: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:41:00.0, compute capability: 8.0
+2025-08-11 08:33:05.979389: I tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2025-08-11 08:33:05.979407: I tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2025-08-11 08:33:05.979417: I tensorflow/core/framework/local_rendezvous.cc:423] Local rendezvous recv item cancelled. Key hash: 14794548639063763055
+2025-08-11 08:33:05.979424: I tensorflow/core/framework/local_rendezvous.cc:423] Local rendezvous recv item cancelled. Key hash: 13065277739043614297
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:160: UserWarning: Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches. You may need to use the `.repeat()` function when building your dataset.
+  self._interrupted_warning()
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 12, in main
+    run_client(comm, rank)
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 177, in run_client
+    stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 37, in log_statistical_utility_tf
+    data_variance = compute_data_variance_tf(x)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 29, in compute_data_variance_tf
+    x_flat = x.reshape(x.shape[0], -1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot reshape array of size 0 into shape (0,newaxis)
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.060755 3530840 service.cc:146] XLA service 0x1541ac008b60 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.061037 3530840 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.080199 3972016 service.cc:146] XLA service 0x14d9bc01d810 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.080485 3972016 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.126370 1143694 service.cc:146] XLA service 0x1475580207e0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.126645 1143694 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.136019 1111584 service.cc:146] XLA service 0x14dd1c01ca30 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.136377 1111584 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.155615   84483 service.cc:146] XLA service 0x14720001ea00 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.155892   84483 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.156046: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.164452 1753713 service.cc:146] XLA service 0x1514600014a0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.164723 1753713 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.172658: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.183250 2533198 service.cc:146] XLA service 0x152818001e30 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.183588 2533198 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.184862 1488494 service.cc:146] XLA service 0x1511c40217a0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.185230 1488494 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.192685 3908978 service.cc:146] XLA service 0x15429c01dae0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.192958 3908978 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.195886  854180 service.cc:146] XLA service 0x1511d000d200 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.196141  854180 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.203686 2271337 service.cc:146] XLA service 0x151888001c20 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.203970 2271337 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.217790 3579799 service.cc:146] XLA service 0x149604008ce0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.218056 3579799 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.220279: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.229071 3705397 service.cc:146] XLA service 0x153550001dc0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.229389 3705397 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.230397 1063089 service.cc:146] XLA service 0x14f6dc021070 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.230704 1063089 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.231910 3934057 service.cc:146] XLA service 0x1471280211f0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.232205 3934057 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.234474: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.239613 3282586 service.cc:146] XLA service 0x1527d4020850 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.239900 3282586 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.247926  999818 service.cc:146] XLA service 0x14dbf801cc80 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.248197  999818 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.249589 1404749 service.cc:146] XLA service 0x1484780021e0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.249901 1404749 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.250192: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.251102  877897 service.cc:146] XLA service 0x145a2c009450 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.251373  877897 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.252282  530982 service.cc:146] XLA service 0x15056401de40 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.252585  530982 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.259069: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.261588 1593469 service.cc:146] XLA service 0x14ab80008270 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.261872 1593469 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.267211  933108 service.cc:146] XLA service 0x14d170021640 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.267502  933108 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.274234 3994048 service.cc:146] XLA service 0x152fc8009310 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.274492 3994048 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.276207: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.276132: I tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2025-08-11 08:33:06.276156: I tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2025-08-11 08:33:06.276166: I tensorflow/core/framework/local_rendezvous.cc:423] Local rendezvous recv item cancelled. Key hash: 16490545237432636863
+2025-08-11 08:33:06.276175: I tensorflow/core/framework/local_rendezvous.cc:423] Local rendezvous recv item cancelled. Key hash: 1327778073283000608
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.278491  457286 service.cc:146] XLA service 0x1497b400e2c0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.278811  457286 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.279872: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+/home/aymenoml/venvs/fedcifar/lib/python3.11/site-packages/keras/src/trainers/epoch_iterator.py:160: UserWarning: Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches. You may need to use the `.repeat()` function when building your dataset.
+  self._interrupted_warning()
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.280121  602732 service.cc:146] XLA service 0x14f8d4009e10 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.280372  602732 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.281532 1896390 service.cc:146] XLA service 0x15121001de30 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.281836 1896390 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.281555  862956 service.cc:146] XLA service 0x1479780226f0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.281945  862956 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.283702: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.287820: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.295543: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.297206 1491767 service.cc:146] XLA service 0x146830003a70 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.297488 1491767 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.309182: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.311502 2967153 service.cc:146] XLA service 0x14ccc4002a00 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.311810 2967153 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.316479 2491262 service.cc:146] XLA service 0x151f7001daf0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.316749 2491262 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+Traceback (most recent call last):
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 15, in <module>
+    main()
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_main.py", line 12, in main
+    run_client(comm, rank)
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 177, in run_client
+    stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 37, in log_statistical_utility_tf
+    data_variance = compute_data_variance_tf(x)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre07/scratch/aymenoml/system-utility-cifar10/federated_mpi/mpi_client.py", line 29, in compute_data_variance_tf
+    x_flat = x.reshape(x.shape[0], -1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot reshape array of size 0 into shape (0,newaxis)
+2025-08-11 08:33:06.322039: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.325653: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.327017: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.328337  516958 service.cc:146] XLA service 0x1506cc003a70 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.328616  516958 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.334796: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.336337 2437321 service.cc:146] XLA service 0x14a1c0004870 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.336715 2437321 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.336710 3091396 service.cc:146] XLA service 0x15205401d710 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.336983 3091396 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.340053 2050417 service.cc:146] XLA service 0x14804001d9d0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.340364 2050417 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.342332: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.343132: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.345151: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.347725: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.350034 3744897 service.cc:146] XLA service 0x1518b001f420 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.350316 3744897 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.355070: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.364275: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.366583 1654261 service.cc:146] XLA service 0x1540ec007d20 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.366860 1654261 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.368304: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.368111 3725092 service.cc:146] XLA service 0x14f96801da50 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.368399 3725092 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.370671: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.376961: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.378480: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.385757: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.391085: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.406389: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.409759: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.410328 3082586 service.cc:146] XLA service 0x1526d801d9b0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.410606 3082586 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.414020 2102556 service.cc:146] XLA service 0x14caf001f800 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.414311 2102556 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.420528: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.421569 3943160 service.cc:146] XLA service 0x147254002200 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.421841 3943160 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.426091 2186472 service.cc:146] XLA service 0x147fdc01d140 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.426367 2186472 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.429892: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.430485: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.433429: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.441595  392602 service.cc:146] XLA service 0x14ef4c001c20 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.441895  392602 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.442963: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.457391 2441484 service.cc:146] XLA service 0x14d418002720 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.457704 2441484 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.458704  309255 service.cc:146] XLA service 0x15092000d630 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.459004  309255 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.461186: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.464180: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.496806 1247581 service.cc:146] XLA service 0x14977c00df70 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.497076 1247581 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.504781: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.514738: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.514748: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.521190: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.533915: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.552842: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.552749: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.561073: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.561946: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.588908 1670648 service.cc:146] XLA service 0x154688002300 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.589192 1670648 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.592078: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.622462: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.626829: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.646143: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915586.648332  570970 service.cc:146] XLA service 0x14a1b00039e0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915586.648628  570970 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:06.649894: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.655232: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.664645: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.666638: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.673324: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.682664: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.692730: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.695543: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.716036: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.724134: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.728017: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.731141: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.732491: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.734270: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.746013: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.749253: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.750357: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.753327: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:06.753800: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.755517: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.760254: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.761260: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.776754: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.790287: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.791183: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.796138: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.801299: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.806517: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.813286: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.815812: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.833554: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.847322: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.858900: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.859790: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.903904: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.918598: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.925169: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.926604: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.936556: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.946230: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.949404: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:06.982717: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1754915587.091419 3720508 service.cc:146] XLA service 0x14bfa801e520 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1754915587.091740 3720508 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2025-08-11 08:33:07.099940: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:07.189661: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-08-11 08:33:07.202131: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+2025-08-11 08:33:07.569921: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8905
+I0000 00:00:1754915590.179464 3579799 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.220152 3082586 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.221623 1111584 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.228932 1404749 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.265067 2533198 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.317623  854180 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.330055 2271337 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.332516 3705397 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.334177 3530840 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.338429 1593469 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.364661 1143694 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.375106 3282586 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.379824 3908978 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.390193 3091396 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.396615 1753713 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.409712 2437321 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.418583 1896390 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.438078  530982 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.453941 1488494 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.460256 2491262 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.467577 3744897 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.495519   84483 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.495844 1491767 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.496580 3725092 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.498143  877897 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.507752 3972016 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.519135  602732 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.521416 3934057 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.537954  309255 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.555107  392602 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.560669  516958 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.565596 2050417 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.565694  933108 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.597220  999818 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.601368 1247581 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.621325 2967153 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.660312  862956 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.755977 2186472 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.776218  457286 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.831312 2102556 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.851678 3943160 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.854247 2441484 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915590.952523 3994048 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915591.320366 1654261 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915591.459633  570970 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915591.504107 3720508 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915591.964247 1670648 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+I0000 00:00:1754915592.622672 1063089 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_reset_if_to: ng10102 [0]: pmixp_coll_tree.c:1318: 0x1532480cfca0: collective timeout seq=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: ng10102 [0]: pmixp_coll.c:286: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1337: 0x1532480cfca0: COLL_FENCE_TREE state seq=1 contribs: loc=0/prnt=0/child=2
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1339: my peerid: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1342: root host: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1356: child contribs [50]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1383: 	 done contrib: ng[10103,31205]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1385: 	 wait contrib: ng[10203,10304,10401,10403,10504,10605-10606,10608-10609,10701-10709,10801,10803-10805,10807,10901-10902,11003-11005,11101,30602-30603,30605,30701,30705-30707,30709,30711,31002-31004,31006,31202,31204,31301-31302,31304-31305]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1392: status: coll=COLL_COLLECT upfw=COLL_SND_NONE dfwd=COLL_SND_NONE
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1394: dfwd status: dfwd_cb_cnt=0, dfwd_cb_wait=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1397: bufs (offset/size): upfw 69/16415, dfwd 69/16415
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_reset_if_to: ng10103 [1]: pmixp_coll_tree.c:1318: 0x14dba00da850: collective timeout seq=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: ng10103 [1]: pmixp_coll.c:286: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1337: 0x14dba00da850: COLL_FENCE_TREE state seq=1 contribs: loc=1/prnt=0/child=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1339: my peerid: 1:ng10103
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1342: root host: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1346: prnt host: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1347: prnt contrib:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1349: 	 [0:ng10102] false
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1392: status: coll=COLL_UPFWD upfw=COLL_SND_DONE dfwd=COLL_SND_NONE
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1394: dfwd status: dfwd_cb_cnt=0, dfwd_cb_wait=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1397: bufs (offset/size): upfw 69/16415, dfwd 69/16415
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_reset_if_to: ng31205 [46]: pmixp_coll_tree.c:1318: 0x1466500a0f20: collective timeout seq=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: ng31205 [46]: pmixp_coll.c:286: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1337: 0x1466500a0f20: COLL_FENCE_TREE state seq=1 contribs: loc=1/prnt=0/child=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1339: my peerid: 46:ng31205
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1342: root host: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1346: prnt host: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1347: prnt contrib:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1349: 	 [0:ng10102] false
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1392: status: coll=COLL_UPFWD upfw=COLL_SND_DONE dfwd=COLL_SND_NONE
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1394: dfwd status: dfwd_cb_cnt=0, dfwd_cb_wait=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1397: bufs (offset/size): upfw 69/16415, dfwd 69/16415
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_reset_if_to: ng10102 [0]: pmixp_coll_tree.c:1318: 0x1532480cfca0: collective timeout seq=2
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: ng10102 [0]: pmixp_coll.c:286: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1337: 0x1532480cfca0: COLL_FENCE_TREE state seq=2 contribs: loc=0/prnt=0/child=2
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1339: my peerid: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1342: root host: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1356: child contribs [50]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1383: 	 done contrib: ng[10103,31205]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1385: 	 wait contrib: ng[10203,10304,10401,10403,10504,10605-10606,10608-10609,10701-10709,10801,10803-10805,10807,10901-10902,11003-11005,11101,30602-30603,30605,30701,30705-30707,30709,30711,31002-31004,31006,31202,31204,31301-31302,31304-31305]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1392: status: coll=COLL_COLLECT upfw=COLL_SND_NONE dfwd=COLL_SND_NONE
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1394: dfwd status: dfwd_cb_cnt=0, dfwd_cb_wait=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10102 [0]: pmixp_coll_tree.c:1397: bufs (offset/size): upfw 69/16415, dfwd 69/16415
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_reset_if_to: ng10103 [1]: pmixp_coll_tree.c:1318: 0x14dba00da850: collective timeout seq=2
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: ng10103 [1]: pmixp_coll.c:286: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1337: 0x14dba00da850: COLL_FENCE_TREE state seq=2 contribs: loc=1/prnt=0/child=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1339: my peerid: 1:ng10103
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1342: root host: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1346: prnt host: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1347: prnt contrib:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1349: 	 [0:ng10102] false
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1392: status: coll=COLL_UPFWD upfw=COLL_SND_DONE dfwd=COLL_SND_NONE
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1394: dfwd status: dfwd_cb_cnt=0, dfwd_cb_wait=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng10103 [1]: pmixp_coll_tree.c:1397: bufs (offset/size): upfw 69/16415, dfwd 69/16415
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_reset_if_to: ng31205 [46]: pmixp_coll_tree.c:1318: 0x1466500a0f20: collective timeout seq=2
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: ng31205 [46]: pmixp_coll.c:286: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1337: 0x1466500a0f20: COLL_FENCE_TREE state seq=2 contribs: loc=1/prnt=0/child=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1339: my peerid: 46:ng31205
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1342: root host: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1346: prnt host: 0:ng10102
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1347: prnt contrib:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1349: 	 [0:ng10102] false
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1392: status: coll=COLL_UPFWD upfw=COLL_SND_DONE dfwd=COLL_SND_NONE
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1394: dfwd status: dfwd_cb_cnt=0, dfwd_cb_wait=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_tree_log: ng31205 [46]: pmixp_coll_tree.c:1397: bufs (offset/size): upfw 69/16415, dfwd 69/16415
+srun: error: ng10103: task 1: Exited with exit code 1
+srun: error: ng31205: task 46: Exited with exit code 1
+srun: Job step aborted: Waiting up to 62 seconds for job step to finish.
+slurmstepd: error: *** JOB 47777111 ON ng10102 CANCELLED AT 2025-08-11T17:09:57 ***
+slurmstepd: error: *** STEP 47777111.0 ON ng10102 CANCELLED AT 2025-08-11T17:09:57 ***
