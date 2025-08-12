@@ -19,15 +19,18 @@ import csv
 from sklearn.metrics import confusion_matrix
 from pathlib import Path
 
+
 def evaluate_keras_model(model, x, y):
     results = model.evaluate(x, y, verbose=0)
     loss = results[0]
     accuracy = results[1] * 100  # percentage
     return loss, accuracy
 
+
 def compute_data_variance_tf(x):
     x_flat = x.reshape(x.shape[0], -1)
     return float(np.var(x_flat))
+
 
 def log_statistical_utility_tf(rank, round_num, x, y, model):
     csv_path = "all_clients_stats.csv"
@@ -59,39 +62,46 @@ def log_statistical_utility_tf(rank, round_num, x, y, model):
         "local_accuracy": local_accuracy
     }
 
+
 def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
     """
     Compute and log confusion matrix for the given data and model.
-    Saves the matrix as a CSV file inside a client-specific subfolder.
+    NOTE: This legacy helper writes locally. Kept for compatibility with earlier calls.
+    The new flow sends CM to the server for centralized writing.
     """
-    # Ensure base folder exists
+    # Ensure base folder exists (client-specific)
     base_dir = Path("logs/confusion_csv") / f"client_{rank}"
     base_dir.mkdir(parents=True, exist_ok=True)
 
-    # PATCH: guard against empty inputs
-    if x_data is None or x_data.shape[0] == 0:
-        return
-    if y_data_oh is None or y_data_oh.shape[0] == 0:
-        return
-
     # Compute predictions
     y_true = np.argmax(y_data_oh, axis=1)
-    y_pred = np.argmax(model.predict(x_data, batch_size=256, verbose=0), axis=1)
+    # Smaller batch to reduce spike risk
+    y_pred = np.argmax(model.predict(x_data, batch_size=64, verbose=0), axis=1)
     cm = confusion_matrix(y_true, y_pred)
 
-    # Save confusion matrix as CSV (tidy or full matrix as needed)
-    out_path = base_dir / f"round_{round_num}.csv"
-    np.savetxt(out_path, cm, delimiter=",", fmt="%d")
+    # Save to CSV file inside client-specific folder
+    csv_path = base_dir / f"round_{round_num}.csv"
+    np.savetxt(csv_path, cm, fmt='%d', delimiter=',')
+
+
+# --- New: compute CM as numpy array (used before sending to server) ---
+def compute_cm_numpy(model, x_data, y_onehot):
+    """
+    Return a confusion-matrix (int32 numpy array) for the given batch.
+    This is used to send a small payload to rank 0 which will write CSVs.
+    """
+    y_true = np.argmax(y_onehot, axis=1)
+    y_pred = np.argmax(model.predict(x_data, batch_size=64, verbose=0), axis=1)
+    cm = confusion_matrix(y_true, y_pred).astype(np.int32)
+    return cm
+
 
 def collect_system_metrics(rank, round_num):
-    """
-    Snapshot of per-process and system usage. Called before and after training to diff.
-    """
+    # This gets the current Python process
     p = psutil.Process(os.getpid())
+
     cpu_times = psutil.cpu_times()
-    # PATCH: psutil.cpu_freq() can return None on some systems
-    freq_obj = psutil.cpu_freq()
-    cpu_freq = float(freq_obj.current) if (freq_obj and getattr(freq_obj, 'current', None) is not None) else None
+    cpu_freq = psutil.cpu_freq().current
     # Get this process's memory usage (RSS: Resident Set Size)
     ram_used = p.memory_info().rss / 1e6
     net = psutil.net_io_counters()
@@ -102,7 +112,7 @@ def collect_system_metrics(rank, round_num):
         gpu = GPUtil.getGPUs()[0]
         gpu_mem_used = gpu.memoryUsed
         gpu_load = gpu.load
-    except:
+    except Exception:
         gpu_mem_used = None
         gpu_load = None
 
@@ -119,6 +129,7 @@ def collect_system_metrics(rank, round_num):
         "gpu_load": gpu_load
     }
 
+
 def compute_per_round_metrics(start_snapshot, end_snapshot):
     return {
         "cpu_time": end_snapshot["cpu_time"] - start_snapshot["cpu_time"],
@@ -128,6 +139,7 @@ def compute_per_round_metrics(start_snapshot, end_snapshot):
         "gpu_mem_used_mb": end_snapshot["gpu_mem_used_mb"],
         "gpu_load": end_snapshot["gpu_load"]
     }
+
 
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
@@ -162,39 +174,12 @@ def run_client(comm, rank):
     x_client = x_client.astype('float32') / 255.0
     y_client = to_categorical(y_client, 10)
 
-    # PATCH: guard for empty local shard
-    has_data = x_client.shape[0] > 0
-
     for round_num in range(1, NUM_ROUNDS + 1):
         model = build_cnn_model()
 
         print(f"    [Client {rank}] Round {round_num} - Waiting for global weights...", flush=True)
         global_weights = comm.bcast(None, root=0)
         model.set_weights(global_weights)
-
-        # PATCH: skip training if no local data
-        if not has_data:
-            print(f"    [Client {rank}] No local samples for this client — skipping training.", flush=True)
-            start_snapshot = collect_system_metrics(rank, round_num)
-            end_snapshot = collect_system_metrics(rank, round_num)
-            metrics = compute_per_round_metrics(start_snapshot, end_snapshot)
-            metrics.update({
-                "client_rank": rank,
-                "round": round_num,
-                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                "skipped": True
-            })
-            updated_weights = serialize_weights(global_weights)
-            print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
-            try:
-                comm.send(updated_weights, dest=0, tag=rank)
-            except Exception as e:
-                print(f"[Client {rank}] Failed to send: {e}", flush=True)
-            try:
-                comm.send(metrics, dest=0, tag=rank + 100)
-            except Exception as e:
-                print(f"[Client {rank}] Failed to send: {e}", flush=True)
-            continue
 
         print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
         start_snapshot = collect_system_metrics(rank, round_num)
@@ -212,24 +197,34 @@ def run_client(comm, rank):
         stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
         print(f"    [Client {rank}] Statistical Utility: {stats}", flush=True)
 
-        # Save confusion matrix (guarded)
+        # === New: Send confusion matrix to server (rank 0) for centralized CSV writing ===
         try:
-            log_confusion_matrix(rank, round_num, model, x_client, y_client)
+            cm = compute_cm_numpy(model, x_client, y_client)
+            comm.send({'kind': 'cm', 'rank': rank, 'round': round_num, 'cm': cm},
+                      dest=0, tag=200 + rank)
         except Exception as e:
-            print(f"    [Client {rank}] Confusion matrix logging skipped: {e}", flush=True)
+            print(f"[Client {rank}] CM send skipped: {e}", flush=True)
 
+        # Send updated weights and metrics to server
         updated_weights = serialize_weights(model.get_weights())
         print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
 
         try:
             comm.send(updated_weights, dest=0, tag=rank)
         except Exception as e:
-            print(f"[Client {rank}] Failed to send: {e}", flush=True)
+            print(f"[Client {rank}] Failed to send weights: {e}", flush=True)
 
         try:
             comm.send(metrics, dest=0, tag=rank + 100)
         except Exception as e:
-            print(f"[Client {rank}] Failed to send: {e}", flush=True)
+            print(f"[Client {rank}] Failed to send metrics: {e}", flush=True)
+
+        # Free TF/Keras resources each round to avoid buildup
+        try:
+            tf.keras.backend.clear_session()
+            del model
+        except Exception:
+            pass
 
     print(f"    [Client {rank}] Training complete. Waiting for others...", flush=True)
     print(f"    [Client {rank}] Exiting.", flush=True)

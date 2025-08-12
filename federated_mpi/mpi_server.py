@@ -8,6 +8,7 @@ import builtins
 
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path  # <-- added
 from model import build_cnn_model
 from data_loader import load_and_preprocess_data
 from mpi_utils import serialize_weights, deserialize_weights
@@ -16,11 +17,21 @@ import csv
 import pandas as pd
 
 
-
 def average_weights(weight_list):
     if not weight_list or any(w is None for w in weight_list):
         raise ValueError("Invalid weights received from clients.")
     return [np.mean(weights, axis=0) for weights in zip(*weight_list)]
+
+
+# ---- added: centralized CM saver (server writes CSVs) -----------------------
+def _save_cm_csv(rank_id: int, round_id: int, cm: np.ndarray):
+    """
+    Save a confusion matrix sent by a client into:
+        logs/confusion_csv/client_{rank_id}/round_{round_id}.csv
+    """
+    out_dir = Path("logs/confusion_csv") / f"client_{rank_id}"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    np.savetxt(out_dir / f"round_{round_id}.csv", cm, fmt="%d", delimiter=",")
 
 
 def run_server(comm):
@@ -70,6 +81,17 @@ def run_server(comm):
             metrics['round'] = round_num  # Add round info
             client_metrics.append(metrics)
             print(f"Received system metrics from client {i}: {metrics}")
+
+        # ---- added: receive one CM per client and save centrally ------------
+        for i in range(1, num_clients + 1):
+            try:
+                msg = comm.recv(source=i, tag=200 + i)
+                if isinstance(msg, dict) and msg.get("kind") == "cm":
+                    cm_arr = np.array(msg["cm"], dtype=np.int32)
+                    _save_cm_csv(msg["rank"], msg["round"], cm_arr)
+                    print(f"Saved CM from client {i} for round {round_num}", flush=True)
+            except Exception as e:
+                print(f"[Server] Error receiving CM from client {i}: {e}", flush=True)
 
         all_client_metrics.extend(client_metrics)
 
