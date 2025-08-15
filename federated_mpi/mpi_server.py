@@ -8,6 +8,7 @@ import builtins
 
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MultipleLocator, AutoMinorLocator, MaxNLocator, PercentFormatter
 from model import build_cnn_model
 from data_loader import load_and_preprocess_data
 from mpi_utils import serialize_weights, deserialize_weights
@@ -89,24 +90,42 @@ def run_server(comm):
     print("Generating training metrics plot...", flush=True)
 
     df_metrics = pd.DataFrame(all_client_metrics)
-    df_metrics.to_csv("client_system_metrics.csv", index=False)
+    df_metrics.to_csv("Data/logs/clients_system.csv", index=False)
 
-    plt.figure(figsize=(10, 4))
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4), constrained_layout=True)
+    ax1, ax2 = axes
 
-    plt.subplot(1, 2, 1)
-    plt.plot(rounds, acc_list, marker='o')
-    plt.title("Federated Test Accuracy")
-    plt.xlabel("Round")
-    plt.ylabel("Accuracy")
-    plt.grid(True)
+    # --- Accuracy ---------------------------------------------------------------
+    ax1.plot(rounds, acc_list, marker='o')
+    ax1.set_title("Federated Test Accuracy")
+    ax1.set_xlabel("Round")
+    ax1.set_ylabel("Accuracy")
 
-    plt.subplot(1, 2, 2)
-    plt.plot(rounds, loss_list, marker='o', color='orange')
-    plt.title("Federated Test Loss")
-    plt.xlabel("Round")
-    plt.ylabel("Loss")
-    plt.grid(True)
+    ax1.set_ylim(0, 1)
+    ax1.yaxis.set_major_formatter(PercentFormatter(xmax=1, decimals=1))  # 0.1 précision
+    ax1.yaxis.set_major_locator(MultipleLocator(0.05))   # pas de 5%
+    ax1.yaxis.set_minor_locator(MultipleLocator(0.01))   # pas de 1%
 
-    plt.tight_layout()
-    plt.savefig("federated_metrics.png")
+    ax1.xaxis.set_major_locator(MaxNLocator(integer=True))
+    ax1.xaxis.set_minor_locator(AutoMinorLocator())
+
+    ax1.grid(True, which='major', linewidth=0.8)
+    ax1.grid(True, which='minor', linestyle=':', linewidth=0.6, alpha=0.6)
+
+    ax2.plot(rounds, loss_list, marker='o', color='orange')
+    ax2.set_title("Federated Test Loss")
+    ax2.set_xlabel("Round")
+    ax2.set_ylabel("Loss")
+
+    ax2.yaxis.set_major_locator(MaxNLocator(nbins=6))
+    ax2.yaxis.set_minor_locator(AutoMinorLocator())
+
+    ax2.xaxis.set_major_locator(MaxNLocator(integer=True))
+    ax2.xaxis.set_minor_locator(AutoMinorLocator())
+
+    ax2.grid(True, which='major', linewidth=0.8)
+    ax2.grid(True, which='minor', linestyle=':', linewidth=0.6, alpha=0.6)
+
+    fig.savefig("Data/federated_metrics.png", dpi=200)
+
     return

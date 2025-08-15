@@ -30,8 +30,8 @@ def compute_data_variance_tf(x):
     return float(np.var(x_flat))
 
 def log_statistical_utility_tf(rank, round_num, x, y, model):
-    csv_path = "all_clients_stats.csv"
-    os.makedirs("client_logs", exist_ok=True)  # optional folder safety
+    csv_path = "Data/logs/clients_stats.csv"
+    os.makedirs("Data/logs", exist_ok=True)  # optional folder safety
 
     data_size = x.shape[0]
     data_variance = compute_data_variance_tf(x)
@@ -65,7 +65,7 @@ def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
     Saves the matrix as a CSV file inside a client-specific subfolder.
     """
     # Ensure base folder exists
-    base_dir = Path("logs/confusion_csv") / f"client_{rank}"
+    base_dir = Path("Data/logs/confusion_csv") / f"client_{rank}"
     base_dir.mkdir(parents=True, exist_ok=True)
 
     # Compute predictions
