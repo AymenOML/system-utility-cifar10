@@ -45,5 +45,3 @@ mkdir -p logs
 # Launch training
 srun --mpi=pmix python federated_mpi/mpi_main.py
 
-# Copy metrics plot if it exists
-[ -f federated_metrics.png ] && cp federated_metrics.png logs/federated_metrics_${SLURM_JOB_ID}.png
