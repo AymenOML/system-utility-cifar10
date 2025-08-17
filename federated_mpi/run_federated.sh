@@ -33,6 +33,7 @@ cd $HOME/scratch/system-utility-cifar10
 # Ensure matplotlib uses non-GUI backend
 export MPLBACKEND=Agg
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export PYTHONPATH="${SLURM_SUBMIT_DIR}:${SLURM_SUBMIT_DIR}/data_treatment/Code/Normalization:${SLURM_SUBMIT_DIR}/data_treatment/Code/Labelling:$PYTHONPATH"
 
 # --- REMOVED FOR NARVAL ---
 # The PSM2_CUDA variable is specific to the interconnect on some Cedar nodes

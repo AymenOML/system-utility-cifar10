@@ -1,12 +1,11 @@
-# federated_mpi/postprocess_pipeline.py
 import os, sys, traceback
-# --- Imports from your scripts ---
+# Make the parent directory importable first
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# now imports:
 from normalize_csvs import normalize_many
 import normalize_confusion_csvs as ncc
 import data_labelling as dl
 
-# So we can import your helper scripts that live one level up
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 def run_postprocessing(base_data_dir="Data", fail_job_on_error=False):
     """
