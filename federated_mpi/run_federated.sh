@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=fed-cifar10
-#SBATCH --nodes=6                     # 1 server + 10 clients
-#SBATCH --ntasks=6                    # 1 MPI process per node
+#SBATCH --nodes=11                     # 1 server + 10 clients
+#SBATCH --ntasks=11                    # 1 MPI process per node
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-node=1              # Request 1 GPU per node (A100 on Narval)
 #SBATCH --cpus-per-task=8              # 8 CPU cores per processgit
@@ -34,6 +34,8 @@ cd $HOME/scratch/system-utility-cifar10
 export MPLBACKEND=Agg
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export PYTHONPATH="${SLURM_SUBMIT_DIR}:${SLURM_SUBMIT_DIR}/data_treatment/Code/Normalization:${SLURM_SUBMIT_DIR}/data_treatment/Code/Labelling:$PYTHONPATH"
+export FEDSEL_ENFORCE=1
+
 
 # --- REMOVED FOR NARVAL ---
 # The PSM2_CUDA variable is specific to the interconnect on some Cedar nodes

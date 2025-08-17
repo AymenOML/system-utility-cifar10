@@ -15,6 +15,8 @@ from config.config import NUM_ROUNDS
 from datetime import datetime
 import csv
 
+import time
+
 # For confusion matrix logging
 from sklearn.metrics import confusion_matrix
 from pathlib import Path
@@ -61,21 +63,56 @@ def log_statistical_utility_tf(rank, round_num, x, y, model):
 
 def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
     """
-    Compute and log confusion matrix for the given data and model.
-    Saves the matrix as a CSV file inside a client-specific subfolder.
+    Compute and save a multiclass confusion matrix for this client and round.
+    Also returns micro-aggregated TP/FP/FN/TN and macro-precision/recall/F1.
     """
-    # Ensure base folder exists
+    # Folder per client
     base_dir = Path("Data/logs/confusion_csv") / f"client_{rank}"
     base_dir.mkdir(parents=True, exist_ok=True)
 
-    # Compute predictions
+    # Predictions (multiclass)
     y_true = np.argmax(y_data_oh, axis=1)
     y_pred = np.argmax(model.predict(x_data, batch_size=256, verbose=0), axis=1)
-    cm = confusion_matrix(y_true, y_pred)
+    cm = confusion_matrix(y_true, y_pred)  # shape (C, C)
 
-    # Save to CSV file inside client-specific folder
-    csv_path = base_dir / f"round_{round_num}.csv"
-    np.savetxt(csv_path, cm, fmt='%d', delimiter=',')
+    # Save full confusion matrix as CSV
+    out_csv = base_dir / f"round_{round_num:03d}.csv"
+    np.savetxt(out_csv, cm, fmt="%d", delimiter=",")
+
+    # Micro-aggregated TP/FP/FN/TN across all classes
+    # (treat "correct" vs "incorrect" as binary for TP/TN/FP/FN)
+    correct = (y_true == y_pred)
+    tp = int(np.sum(correct))                            # predicted correct
+    total = len(y_true)
+    fp = int(np.sum(~correct))                           # predicted incorrect
+    fn = fp                                              # symmetric in this collapse
+    tn = int(total - tp - fp - fn)                       # will be 0 in this collapse
+
+    # Macro precision/recall/F1 across classes (avoid div-by-zero)
+    per_class_prec, per_class_rec, per_class_f1 = [], [], []
+    C = cm.shape[0]
+    for c in range(C):
+        tp_c = cm[c, c]
+        fp_c = cm[:, c].sum() - tp_c
+        fn_c = cm[c, :].sum() - tp_c
+        prec_c = tp_c / (tp_c + fp_c) if (tp_c + fp_c) else 0.0
+        rec_c  = tp_c / (tp_c + fn_c) if (tp_c + fn_c) else 0.0
+        f1_c   = (2 * prec_c * rec_c) / (prec_c + rec_c) if (prec_c + rec_c) else 0.0
+        per_class_prec.append(prec_c)
+        per_class_rec.append(rec_c)
+        per_class_f1.append(f1_c)
+
+    precision_macro = float(np.mean(per_class_prec))
+    recall_macro    = float(np.mean(per_class_rec))
+    f1_macro        = float(np.mean(per_class_f1))
+
+    return {
+        "tn": tn, "fp": fp, "fn": fn, "tp": tp,
+        "precision": precision_macro,
+        "recall": recall_macro,
+        "f1": f1_macro
+    }
+
 
 
 def collect_system_metrics(rank, round_num):
@@ -125,6 +162,8 @@ def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
     print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
 
+    enforce_selection = os.getenv("FEDSEL_ENFORCE", "0") == "1"
+
     if rank == 0:
         print(f"[Server {rank}] Nothing to do in run_client()", flush=True)
         return
@@ -154,44 +193,80 @@ def run_client(comm, rank):
     x_client = x_client.astype('float32') / 255.0
     y_client = to_categorical(y_client, 10)
 
+    # NOTE: Do NOT bcast selection here; the server broadcasts the cohort
+    #       before round 1 and then at the END of each round thereafter.
+    #       We receive it once at the TOP of each round below.
+
     for round_num in range(1, NUM_ROUNDS + 1):
         model = build_cnn_model()
 
+        # === (A) Receive selection list IF enforcement is enabled ===
+        # One cohort bcast per round, matching the server.
+        active = True
+        if enforce_selection:
+            selected = comm.bcast(None, root=0)   # server sent at end of previous round (and once before round 1)
+            active = (rank in selected)
+
+        # === (B) Receive global weights, set model ===
         print(f"    [Client {rank}] Round {round_num} - Waiting for global weights...", flush=True)
         global_weights = comm.bcast(None, root=0)
         model.set_weights(global_weights)
 
-        print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
-        start_snapshot = collect_system_metrics(rank, round_num)
-        model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
-        end_snapshot = collect_system_metrics(rank, round_num)
+        # === (C) Train if active; otherwise skip and echo weights ===
+        if active:
+            print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
+            start_snapshot = collect_system_metrics(rank, round_num)
+            model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
+            end_snapshot = collect_system_metrics(rank, round_num)
+        else:
+            # Still collect snapshots so metrics are defined
+            start_snapshot = collect_system_metrics(rank, round_num)
+            end_snapshot = collect_system_metrics(rank, round_num)
 
+        # System metrics (CPU/GPU/RAM/network deltas, etc.)
         metrics = compute_per_round_metrics(start_snapshot, end_snapshot)
         metrics.update({
             "client_rank": rank,
             "round": round_num,
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "participated": 1 if active else 0,
         })
-        print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
 
+        # Statistical utility (loss/accuracy, variance, data size)
         stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
-        print(f"    [Client {rank}] Statistical Utility: {stats}", flush=True)
+        if isinstance(stats, dict):
+            metrics.update(stats)
 
-        # New: Confusion matrix logging as CSV
-        log_confusion_matrix(rank, round_num, model, x_client, y_client)
+        # Confusion-derived metrics (+ still write the CSVs)
+        conf = log_confusion_matrix(rank, round_num, model, x_client, y_client)
+        if isinstance(conf, dict):
+            metrics.update(conf)
 
-        updated_weights = serialize_weights(model.get_weights())
+        # === (D) Prepare weights to send ===
+        if active:
+            updated_weights = serialize_weights(model.get_weights())
+        else:
+            # Echo the global weights unchanged so the server’s averaging can mask non-participants
+            updated_weights = serialize_weights(global_weights)
+
         print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
 
+        # === (E) Send weights and metrics ===
         try:
             comm.send(updated_weights, dest=0, tag=rank)
         except Exception as e:
-            print(f"[Client {rank}] Failed to send: {e}", flush=True)
+            print(f"[Client {rank}] Failed to send weights: {e}", flush=True)
 
         try:
             comm.send(metrics, dest=0, tag=rank + 100)
         except Exception as e:
-            print(f"[Client {rank}] Failed to send: {e}", flush=True)
+            print(f"[Client {rank}] Failed to send metrics: {e}", flush=True)
+
+        # === (F) End-of-round barrier to match the server before it broadcasts next cohort ===
+        try:
+            comm.Barrier()
+        except Exception as e:
+            print(f"[Client {rank}] Barrier failed at round {round_num}: {e}", flush=True)
 
     print(f"    [Client {rank}] Training complete. Waiting for others...", flush=True)
     print(f"    [Client {rank}] Exiting.", flush=True)
