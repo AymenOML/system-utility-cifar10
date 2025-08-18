@@ -38,7 +38,6 @@ def _select_next_clients_with_mlp(selector, client_metrics, round_idx, num_clien
     num_clients: int
     Returns: list[int] selected client ids for next round
     """
-    # Normalize various shapes into: { client_id -> {feature_name: value, ...} }
     client_reports = {}
 
     if isinstance(client_metrics, dict):
@@ -63,6 +62,7 @@ def _select_next_clients_with_mlp(selector, client_metrics, round_idx, num_clien
         return list(range(1, num_clients + 1))
 
     round_dir = os.path.join("Data", "logs", f"round_{round_idx:03d}")
+    os.makedirs(round_dir, exist_ok=True)  # ensure the folder exists even if selector errors
     selected = selector.run_for_round(round_idx, client_reports, out_dir=round_dir)
     return selected
 
@@ -70,6 +70,9 @@ def _select_next_clients_with_mlp(selector, client_metrics, round_idx, num_clien
 def run_server(comm):
 
     print("=== Federated Server Started ===", flush=True)
+    print(f"[server] CWD = {os.getcwd()}", flush=True)
+    os.makedirs("Data/logs", exist_ok=True)
+
     num_clients = comm.Get_size() - 1
     print(f"Total processes: {num_clients + 1} (1 server + {num_clients} clients)\n", flush=True)
 
@@ -84,16 +87,22 @@ def run_server(comm):
     rounds = []
     all_client_metrics = []
 
-    # Selector (optional)
+    # Selector (threshold mode in your round_selector.py)
     try:
-        selector = RoundSelector(model_dir="Model", top_k=min(10, num_clients))  # adjust K as needed
-        print(f"[selector] Loaded MLP from Model/ (top_k={selector.top_k})", flush=True)
+        selector = RoundSelector(model_dir="Model")  # threshold mode ignores top_k
+        # If your RoundSelector has .threshold (from the patch), log it:
+        th = getattr(selector, "threshold", None)
+        if th is not None:
+            print(f"[selector] Loaded MLP (threshold={th})", flush=True)
+        else:
+            print(f"[selector] Loaded MLP", flush=True)
     except Exception as e:
         print("[selector] WARNING: could not initialize MLP selector:", e, flush=True)
         selector = None
 
     # Enforcement flag and initial cohort (for round 1)
     ENFORCE = os.getenv("FEDSEL_ENFORCE", "0") == "1"
+    print(f"[selector] ENFORCE = {ENFORCE}", flush=True)
     next_selected = list(range(1, num_clients + 1))  # default cohort = all clients
 
     if ENFORCE:
@@ -115,7 +124,6 @@ def run_server(comm):
                 received = None
 
             print(f"Received weights from client {i}", flush=True)
-            # Allow None here; average_weights will error if any None (which is fine to surface)
             client_weights.append(deserialize_weights(received) if received is not None else None)
 
         client_metrics = []
@@ -139,9 +147,18 @@ def run_server(comm):
         if selector is not None:
             try:
                 client_reports = {cid: md for cid, md in enumerate(client_metrics, start=1)}
-                next_selected = selector.run_for_round(round_num, client_reports,
-                                                       out_dir=os.path.join("Data", "logs", f"round_{round_num:03d}"))
+                round_dir = os.path.join("Data", "logs", f"round_{round_num:03d}")
+                os.makedirs(round_dir, exist_ok=True)  # make sure folder exists
+                next_selected = selector.run_for_round(round_num, client_reports, out_dir=round_dir)
                 print(f"[selector] Round {round_num}: selected for next round: {next_selected}", flush=True)
+                # Append a concise participation journal (selected-only)
+                journal_path = "Data/participation_journal.csv"
+                new_file = not os.path.exists(journal_path)
+                with open(journal_path, "a") as jf:
+                    if new_file:
+                        jf.write("round,client_rank\n")
+                    for cid in next_selected:
+                        jf.write(f"{round_num},{cid}\n")
             except Exception as e:
                 print(f"[selector] ERROR at round {round_num}: {e}", flush=True)
                 next_selected = list(range(1, num_clients + 1))  # fallback: everyone
@@ -155,16 +172,25 @@ def run_server(comm):
 
         # --- Average weights (mask out non-participants if enforcing) ---
         participants_mask = [(m or {}).get("participated", 1) == 1 for m in client_metrics]
+        trained_count = sum(participants_mask)
+        print(f"[selector] Round {round_num}: participants used in averaging = {trained_count}/{num_clients}", flush=True)
+
         if ENFORCE:
-            client_weights_used = [
-                w for w, keep in zip(client_weights, participants_mask) if keep
-            ]
+            client_weights_used = [w for w, keep in zip(client_weights, participants_mask) if keep]
+            if len(client_weights_used) == 0:
+                # Edge case: no one trained (e.g., high threshold and all filtered out)
+                print("[selector] No participants passed threshold; reusing previous global weights.", flush=True)
+                client_weights_used = None
         else:
             client_weights_used = client_weights
 
         print("Averaging model weights...")
-        global_weights = average_weights(client_weights_used)
-        model.set_weights(global_weights)
+        if client_weights_used:
+            global_weights = average_weights(client_weights_used)
+            model.set_weights(global_weights)
+        else:
+            # keep model/weights unchanged this round
+            pass
 
         print("Evaluating updated global model on test set...", flush=True)
         loss, accuracy = model.evaluate(x_test, y_test, verbose=0)

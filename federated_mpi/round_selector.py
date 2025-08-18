@@ -2,7 +2,6 @@
 import os, json, pickle
 import numpy as np
 import pandas as pd
-
 from tensorflow.keras.models import load_model
 
 # Optional: online scaler if you don't have a saved one
@@ -39,10 +38,12 @@ def _locate(path_candidates):
 
 class RoundSelector:
     """
-    Per-round: build features -> normalize -> label (heuristic) -> predict with MLP -> pick next clients.
+    Per-round: build features -> normalize -> (optional) heuristic label
+    -> predict with MLP -> pick next clients (threshold mode).
     Saves round artifacts under Data/logs/round_XXX/.
     """
     def __init__(self, model_dir="Model", top_k=10):
+        # NOTE: top_k is ignored in threshold mode; kept for API compatibility.
         self.model_dir = model_dir
         self.model_path = _locate([
             os.path.join(model_dir, "mlp_client_selector.h5"),
@@ -72,8 +73,14 @@ class RoundSelector:
             with open(self.scaler_path, "rb") as f:
                 self.scaler = pickle.load(f)
 
-        self.top_k = top_k
+        self.top_k = top_k  # not used now (threshold mode)
         self._online_scaler = None  # created on first use if needed
+
+        # Selection threshold (default 0.5, overridable via ENV)
+        th_env = os.getenv("FEDSEL_THRESH")
+        self.threshold = float(th_env) if th_env not in (None, "", "None") else 0.5
+        # Fallback to ensure some progress if nobody passes the threshold
+        self.fallback_top1_if_none = True
 
         # Heuristic labelling (optional, for traceability)
         self._dl = None
@@ -85,16 +92,15 @@ class RoundSelector:
             self._dl = None
 
     def _ensure_online_scaler(self, n_features):
-        if self.scaler is None:
-            if self._online_scaler is None:
-                self._online_scaler = OnlineStandardScaler(n_features)
+        if self.scaler is None and self._online_scaler is None:
+            self._online_scaler = OnlineStandardScaler(n_features)
         return self._online_scaler
 
     def build_feature_df(self, client_reports, feature_order=None):
         """
         client_reports: dict {client_id:int -> dict metric_name->value}
         feature_order: list of metric names; if None, infer from first item (excluding ID/LABEL/DROP_COLS).
-        Returns: df with ID cols + features (float), and the inferred feature list used.
+        Returns: df with ID cols + features (float), and the feature list used.
         """
         cids = sorted(client_reports.keys())
         rows = []
@@ -161,13 +167,18 @@ class RoundSelector:
             return out, {"fallback": "z-mean>=0"}
 
     def predict_and_select(self, Xn, client_ids, threshold=None):
+        """
+        Threshold mode: select ALL clients with p >= threshold.
+        If none pass, optionally fall back to top-1 to keep training moving.
+        """
         probs = self.model.predict(Xn, verbose=0).reshape(-1)
-        if threshold is None:
-            idx = np.argsort(-probs)[: self.top_k]
-        else:
-            idx = np.where(probs >= threshold)[0]
-            if idx.size > self.top_k:
-                idx = idx[np.argsort(-probs[idx])[: self.top_k]]
+        thr = self.threshold if threshold is None else float(threshold)
+
+        idx = np.where(probs >= thr)[0]
+
+        if idx.size == 0 and self.fallback_top1_if_none:
+            idx = np.array([int(np.argmax(probs))], dtype=int)
+
         selected = [int(client_ids[i]) for i in idx]
         return selected, probs
 
@@ -179,7 +190,6 @@ class RoundSelector:
         os.makedirs(out_dir, exist_ok=True)
 
         # 1) Build features DF (IDs + features)
-        # Prefer training feature order if available
         df_raw, inferred = self.build_feature_df(
             client_reports,
             feature_order=self.feature_order if self.feature_order else None
@@ -193,21 +203,33 @@ class RoundSelector:
         df_norm = pd.DataFrame(Xn, columns=feats_used)
         df_norm = pd.concat([df_id, df_norm], axis=1)
 
-        # 3) Heuristic labels for audit
+        # 3) Heuristic labels for audit (optional)
         df_labeled, lab_meta = self.label_heuristic(pd.concat([df_id, df_feats], axis=1))
 
-        # 4) Predict with the MLP
-        selected, probs = self.predict_and_select(Xn, df_id["client_rank"].values)
+        # 4) Predict with the MLP (threshold mode)
+        selected, probs = self.predict_and_select(Xn, df_id["client_rank"].values, threshold=self.threshold)
 
         # 5) Persist round artifacts
         df_raw.to_csv(os.path.join(out_dir, "features_raw.csv"), index=False)
         df_norm.to_csv(os.path.join(out_dir, "features_normalized.csv"), index=False)
         df_labeled.to_csv(os.path.join(out_dir, "labels_heuristic.csv"), index=False)
+
         pd.DataFrame({
             "client_rank": df_id["client_rank"].values,
             "p_select": probs
         }).to_csv(os.path.join(out_dir, "selector_probs.csv"), index=False)
+
         with open(os.path.join(out_dir, "selected_clients.txt"), "w") as f:
             f.write(",".join(map(str, selected)))
+
+        # Also write a tiny meta file for audit (threshold + counts)
+        meta = {
+            "round": int(r),
+            "threshold": float(self.threshold),
+            "num_candidates": int(len(df_id)),
+            "num_selected": int(len(selected)),
+        }
+        with open(os.path.join(out_dir, "selection_meta.json"), "w") as mf:
+            json.dump(meta, mf, indent=2)
 
         return selected
