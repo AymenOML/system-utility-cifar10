@@ -85,9 +85,13 @@ def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
     np.savetxt(out_csv, cm, fmt="%d", delimiter=",")
 
     # Row-normalize then average all cells → stable scalar feature for selector
+    # Row-normalize to get per-class distributions
     row_sums = cm.sum(axis=1, keepdims=True) + 1e-9
     cm_norm = cm / row_sums
-    confusion_mean = float(cm_norm.mean())
+
+    # Use the mean of the diagonal of the normalized CM (avg per-class accuracy)
+    confusion_mean = float(np.trace(cm_norm) / cm_norm.shape[0])
+
 
     # Micro-aggregated "correct vs incorrect"
     correct = (y_true == y_pred)
