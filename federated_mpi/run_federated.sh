@@ -51,5 +51,5 @@ else
   echo "[job][WARN] Model/mlp_client_selector.h5 NOT FOUND under $PWD/Model"
 fi
 
-# --- Launch training (unbuffered python; pmix or pmix_v3 depending on Narval) ---
-srun --mpi=pmix_v3 python -u federated_mpi/mpi_main.py
+# --- Launch training (unbuffered python; pmix---
+srun --mpi=pmix python -u federated_mpi/mpi_main.py
