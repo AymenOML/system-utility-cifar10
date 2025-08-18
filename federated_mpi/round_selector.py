@@ -4,6 +4,9 @@ import numpy as np
 import pandas as pd
 from tensorflow.keras.models import load_model
 
+# --- Config flags (via env) ---
+SELECTED_ONLY = os.getenv("FEDSEL_JOURNAL_SELECTED_ONLY", "0") == "1"  # save CSVs for selected clients only
+
 # Optional: online scaler if you don't have a saved one
 class OnlineStandardScaler:
     def __init__(self, n_features, eps=1e-8):
@@ -40,10 +43,12 @@ class RoundSelector:
     """
     Per-round: build features -> normalize -> (optional) heuristic label
     -> predict with MLP -> pick next clients (threshold mode).
-    Saves round artifacts under Data/logs/round_XXX/.
+    Saves artifacts under Data/logs/round_XXX/.
+    Threshold: FEDSEL_THRESH (default 0.5)
+    Selected-only journaling: FEDSEL_JOURNAL_SELECTED_ONLY=1
     """
     def __init__(self, model_dir="Model", top_k=10):
-        # NOTE: top_k is ignored in threshold mode; kept for API compatibility.
+        # NOTE: top_k kept for API compatibility; ignored in threshold mode.
         self.model_dir = model_dir
         self.model_path = _locate([
             os.path.join(model_dir, "mlp_client_selector.h5"),
@@ -54,7 +59,7 @@ class RoundSelector:
 
         self.model = load_model(self.model_path)
 
-        # Try to load artifacts from training (preferred)
+        # Optional training artifacts
         self.features_path = _locate([
             os.path.join(model_dir, "features.json"),
             os.path.join("Models", "features.json"),
@@ -73,22 +78,21 @@ class RoundSelector:
             with open(self.scaler_path, "rb") as f:
                 self.scaler = pickle.load(f)
 
-        self.top_k = top_k  # not used now (threshold mode)
+        self.top_k = top_k
         self._online_scaler = None  # created on first use if needed
 
-        # Selection threshold (default 0.5, overridable via ENV)
+        # Threshold selection (default 0.5, overridable via env)
         th_env = os.getenv("FEDSEL_THRESH")
         self.threshold = float(th_env) if th_env not in (None, "", "None") else 0.5
-        # Fallback to ensure some progress if nobody passes the threshold
+        # Safety: if no one passes, keep top-1 so training progresses
         self.fallback_top1_if_none = True
 
-        # Heuristic labelling (optional, for traceability)
+        # Heuristic labelling (optional, for audit)
         self._dl = None
         try:
             import data_labelling as dl
             self._dl = dl
         except Exception:
-            # If not importable via PYTHONPATH, just skip heuristic labelling in-round.
             self._dl = None
 
     def _ensure_online_scaler(self, n_features):
@@ -99,15 +103,12 @@ class RoundSelector:
     def build_feature_df(self, client_reports, feature_order=None):
         """
         client_reports: dict {client_id:int -> dict metric_name->value}
-        feature_order: list of metric names; if None, infer from first item (excluding ID/LABEL/DROP_COLS).
         Returns: df with ID cols + features (float), and the feature list used.
         """
         cids = sorted(client_reports.keys())
         rows = []
-        # Infer features if not provided
         inferred = feature_order
         if inferred is None:
-            # Take all numeric-like keys found in first report, exclude IDs/labels
             first = client_reports[cids[0]]
             inferred = [k for k in first.keys() if k not in DROP_COLS]
 
@@ -117,19 +118,14 @@ class RoundSelector:
             rows.append(rec)
 
         df = pd.DataFrame(rows)
-        # Ensure required columns exist
         for col in ["round"] + inferred:
             if col not in df.columns:
                 df[col] = 0.0
 
-        # Coerce features to float, keep ID cols
         for col in inferred:
             df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0.0).astype(float)
         df["client_rank"] = df["client_rank"].astype(int)
-        if "round" in df.columns:
-            df["round"] = pd.to_numeric(df["round"], errors="coerce").fillna(0).astype(int)
-        else:
-            df["round"] = 0
+        df["round"] = pd.to_numeric(df.get("round", 0), errors="coerce").fillna(0).astype(int)
 
         return df[ID_COLS + inferred], inferred
 
@@ -152,13 +148,11 @@ class RoundSelector:
         if self._dl is None:
             return df_full.copy(), {}
         try:
-            # Reuse your existing method if available
             labeled, thresholds, cutoff, numeric_cols = self._dl.classify_equal_importance(
                 df_full.copy(), per_round=True
             )
             return labeled, {"thresholds": thresholds, "cutoff": cutoff, "numeric_cols": numeric_cols}
         except Exception:
-            # Fallback: mean of z-scored features >= 0 selects class 1
             feats = [c for c in df_full.columns if c not in DROP_COLS]
             Z = (df_full[feats] - df_full[feats].mean()) / (df_full[feats].std(ddof=0) + 1e-8)
             score = Z.mean(axis=1)
@@ -173,19 +167,17 @@ class RoundSelector:
         """
         probs = self.model.predict(Xn, verbose=0).reshape(-1)
         thr = self.threshold if threshold is None else float(threshold)
-
         idx = np.where(probs >= thr)[0]
-
         if idx.size == 0 and self.fallback_top1_if_none:
             idx = np.array([int(np.argmax(probs))], dtype=int)
-
         selected = [int(client_ids[i]) for i in idx]
         return selected, probs
 
     def run_for_round(self, r, client_reports, out_dir):
         """
         Complete per-round pipeline. Returns list of selected client IDs (ints).
-        Saves CSVs under out_dir.
+        Saves CSVs under out_dir. If SELECTED_ONLY is True, all CSVs are filtered
+        to the selected set.
         """
         os.makedirs(out_dir, exist_ok=True)
 
@@ -207,27 +199,44 @@ class RoundSelector:
         df_labeled, lab_meta = self.label_heuristic(pd.concat([df_id, df_feats], axis=1))
 
         # 4) Predict with the MLP (threshold mode)
-        selected, probs = self.predict_and_select(Xn, df_id["client_rank"].values, threshold=self.threshold)
+        client_ids = df_id["client_rank"].values
+        selected, probs = self.predict_and_select(Xn, client_ids, threshold=self.threshold)
+        sel_set = set(selected)
 
-        # 5) Persist round artifacts
-        df_raw.to_csv(os.path.join(out_dir, "features_raw.csv"), index=False)
-        df_norm.to_csv(os.path.join(out_dir, "features_normalized.csv"), index=False)
-        df_labeled.to_csv(os.path.join(out_dir, "labels_heuristic.csv"), index=False)
+        # 5) Persist round artifacts (selected-only or all)
+        if SELECTED_ONLY:
+            keep_mask = df_id["client_rank"].isin(sel_set).values
+            df_raw_to_save  = pd.concat([df_id, df_feats], axis=1).loc[keep_mask]
+            df_norm_to_save = df_norm.loc[keep_mask]
+            df_labeled_to_save = df_labeled.loc[keep_mask] if "client_rank" in df_labeled.columns else df_labeled
+            probs_to_save = probs[keep_mask]
+            client_ids_for_probs = df_id.loc[keep_mask, "client_rank"].values
+        else:
+            df_raw_to_save  = pd.concat([df_id, df_feats], axis=1)
+            df_norm_to_save = df_norm
+            df_labeled_to_save = df_labeled
+            probs_to_save = probs
+            client_ids_for_probs = client_ids
+
+        df_raw_to_save.to_csv(os.path.join(out_dir, "features_raw.csv"), index=False)
+        df_norm_to_save.to_csv(os.path.join(out_dir, "features_normalized.csv"), index=False)
+        df_labeled_to_save.to_csv(os.path.join(out_dir, "labels_heuristic.csv"), index=False)
 
         pd.DataFrame({
-            "client_rank": df_id["client_rank"].values,
-            "p_select": probs
+            "client_rank": client_ids_for_probs,
+            "p_select": probs_to_save
         }).to_csv(os.path.join(out_dir, "selector_probs.csv"), index=False)
 
         with open(os.path.join(out_dir, "selected_clients.txt"), "w") as f:
             f.write(",".join(map(str, selected)))
 
-        # Also write a tiny meta file for audit (threshold + counts)
+        # Meta for audit (threshold + counts)
         meta = {
             "round": int(r),
             "threshold": float(self.threshold),
             "num_candidates": int(len(df_id)),
             "num_selected": int(len(selected)),
+            "selected_only_saved": bool(SELECTED_ONLY),
         }
         with open(os.path.join(out_dir, "selection_meta.json"), "w") as mf:
             json.dump(meta, mf, indent=2)

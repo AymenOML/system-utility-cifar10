@@ -14,7 +14,6 @@ from mpi4py import MPI
 from config.config import NUM_ROUNDS
 from datetime import datetime
 import csv
-
 import time
 
 # For confusion matrix logging
@@ -32,8 +31,9 @@ def compute_data_variance_tf(x):
     return float(np.var(x_flat))
 
 def log_statistical_utility_tf(rank, round_num, x, y, model):
+    # Only called when active
     csv_path = "Data/logs/clients_stats.csv"
-    os.makedirs("Data/logs", exist_ok=True)  # optional folder safety
+    os.makedirs("Data/logs", exist_ok=True)
 
     data_size = x.shape[0]
     data_variance = compute_data_variance_tf(x)
@@ -65,30 +65,28 @@ def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
     """
     Compute and save a multiclass confusion matrix for this client and round.
     Also returns micro-aggregated TP/FP/FN/TN and macro-precision/recall/F1.
+    Called ONLY when active (selected).
     """
-    # Folder per client
     base_dir = Path("Data/logs/confusion_csv") / f"client_{rank}"
     base_dir.mkdir(parents=True, exist_ok=True)
 
-    # Predictions (multiclass)
     y_true = np.argmax(y_data_oh, axis=1)
     y_pred = np.argmax(model.predict(x_data, batch_size=256, verbose=0), axis=1)
-    cm = confusion_matrix(y_true, y_pred)  # shape (C, C)
+    cm = confusion_matrix(y_true, y_pred)  # (C, C)
 
     # Save full confusion matrix as CSV
     out_csv = base_dir / f"round_{round_num:03d}.csv"
     np.savetxt(out_csv, cm, fmt="%d", delimiter=",")
 
-    # Micro-aggregated TP/FP/FN/TN across all classes
-    # (treat "correct" vs "incorrect" as binary for TP/TN/FP/FN)
+    # Micro-aggregated binary collapse
     correct = (y_true == y_pred)
-    tp = int(np.sum(correct))                            # predicted correct
+    tp = int(np.sum(correct))
     total = len(y_true)
-    fp = int(np.sum(~correct))                           # predicted incorrect
-    fn = fp                                              # symmetric in this collapse
-    tn = int(total - tp - fp - fn)                       # will be 0 in this collapse
+    fp = int(np.sum(~correct))
+    fn = fp
+    tn = int(total - tp - fp - fn)  # 0 in this collapse
 
-    # Macro precision/recall/F1 across classes (avoid div-by-zero)
+    # Macro precision/recall/F1 across classes
     per_class_prec, per_class_rec, per_class_f1 = [], [], []
     C = cm.shape[0]
     for c in range(C):
@@ -113,15 +111,10 @@ def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
         "f1": f1_macro
     }
 
-
-
 def collect_system_metrics(rank, round_num):
-    # This gets the current Python process
     p = psutil.Process(os.getpid())
-    
     cpu_times = psutil.cpu_times()
-    cpu_freq = psutil.cpu_freq().current
-    # Get this process's memory usage (RSS: Resident Set Size)
+    cpu_freq = psutil.cpu_freq().current if psutil.cpu_freq() else 0.0
     ram_used = p.memory_info().rss / 1e6
     net = psutil.net_io_counters()
     net_sent = net.bytes_sent
@@ -151,7 +144,7 @@ def collect_system_metrics(rank, round_num):
 def compute_per_round_metrics(start_snapshot, end_snapshot):
     return {
         "cpu_time": end_snapshot["cpu_time"] - start_snapshot["cpu_time"],
-        "ram_used_mb": end_snapshot["ram_used_mb"],  # typically just take the latest
+        "ram_used_mb": end_snapshot["ram_used_mb"],
         "net_sent_bytes": end_snapshot["net_sent_bytes"] - start_snapshot["net_sent_bytes"],
         "net_recv_bytes": end_snapshot["net_recv_bytes"] - start_snapshot["net_recv_bytes"],
         "gpu_mem_used_mb": end_snapshot["gpu_mem_used_mb"],
@@ -193,18 +186,13 @@ def run_client(comm, rank):
     x_client = x_client.astype('float32') / 255.0
     y_client = to_categorical(y_client, 10)
 
-    # NOTE: Do NOT bcast selection here; the server broadcasts the cohort
-    #       before round 1 and then at the END of each round thereafter.
-    #       We receive it once at the TOP of each round below.
-
     for round_num in range(1, NUM_ROUNDS + 1):
         model = build_cnn_model()
 
         # === (A) Receive selection list IF enforcement is enabled ===
-        # One cohort bcast per round, matching the server.
         active = True
         if enforce_selection:
-            selected = comm.bcast(None, root=0)   # server sent at end of previous round (and once before round 1)
+            selected = comm.bcast(None, root=0)  # server sent at end of previous round (and once before round 1)
             active = (rank in selected)
 
         # === (B) Receive global weights, set model ===
@@ -215,15 +203,16 @@ def run_client(comm, rank):
         # === (C) Train if active; otherwise skip and echo weights ===
         if active:
             print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
-            start_snapshot = collect_system_metrics(rank, round_num)
-            model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
-            end_snapshot = collect_system_metrics(rank, round_num)
         else:
-            # Still collect snapshots so metrics are defined
-            start_snapshot = collect_system_metrics(rank, round_num)
-            end_snapshot = collect_system_metrics(rank, round_num)
+            print(f"    [Client {rank}] Round {round_num} - SKIP (not selected).", flush=True)
 
-        # System metrics (CPU/GPU/RAM/network deltas, etc.)
+        start_snapshot = collect_system_metrics(rank, round_num)
+        if active:
+            model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
+        # even if inactive, we still take a second snapshot for deltas
+        end_snapshot = collect_system_metrics(rank, round_num)
+
+        # System metrics (always send, lightweight)
         metrics = compute_per_round_metrics(start_snapshot, end_snapshot)
         metrics.update({
             "client_rank": rank,
@@ -232,15 +221,22 @@ def run_client(comm, rank):
             "participated": 1 if active else 0,
         })
 
-        # Statistical utility (loss/accuracy, variance, data size)
-        stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
-        if isinstance(stats, dict):
+        # Statistical utility + confusion (ONLY if active)
+        if active:
+            stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model) or {}
+            conf  = log_confusion_matrix(rank, round_num, model, x_client, y_client) or {}
             metrics.update(stats)
-
-        # Confusion-derived metrics (+ still write the CSVs)
-        conf = log_confusion_matrix(rank, round_num, model, x_client, y_client)
-        if isinstance(conf, dict):
             metrics.update(conf)
+        else:
+            # Lightweight placeholders; DO NOT write any CSVs when inactive
+            metrics.update({
+                "data_size": int(x_client.shape[0]),
+                "data_variance": float(np.var(x_client.astype(np.float32))),
+                "local_loss": 0.0,
+                "local_accuracy": 0.0,
+                "precision": 0.0, "recall": 0.0, "f1": 0.0,
+                "tn": 0, "fp": 0, "fn": 0, "tp": 0,
+            })
 
         # === (D) Prepare weights to send ===
         if active:

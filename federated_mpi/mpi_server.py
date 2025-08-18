@@ -23,6 +23,9 @@ import pandas as pd
 # MLP round selector
 from federated_mpi.round_selector import RoundSelector
 
+# ---- NEW: selected-only journaling flag
+SELECTED_ONLY = os.getenv("FEDSEL_JOURNAL_SELECTED_ONLY", "0") == "1"
+
 
 def average_weights(weight_list):
     if not weight_list or any(w is None for w in weight_list):
@@ -175,6 +178,14 @@ def run_server(comm):
         trained_count = sum(participants_mask)
         print(f"[selector] Round {round_num}: participants used in averaging = {trained_count}/{num_clients}", flush=True)
 
+        # ---- NEW: quick cross-check with selection length (informative only)
+        if ENFORCE and selector is not None:
+            try:
+                if len(next_selected) != trained_count:
+                    print(f"[selector][warn] mismatch: selected={len(next_selected)} vs participated={trained_count}", flush=True)
+            except Exception:
+                pass
+
         if ENFORCE:
             client_weights_used = [w for w, keep in zip(client_weights, participants_mask) if keep]
             if len(client_weights_used) == 0:
@@ -206,6 +217,11 @@ def run_server(comm):
     # Persist system metrics CSV
     df_metrics = pd.DataFrame(all_client_metrics)
     os.makedirs("Data/logs", exist_ok=True)
+
+    # ---- NEW: selected-only journaling for the big system CSV (optional)
+    if SELECTED_ONLY and "participated" in df_metrics.columns:
+        df_metrics = df_metrics[df_metrics["participated"] == 1]
+
     df_metrics.to_csv("Data/logs/clients_system.csv", index=False)
 
     # Plots

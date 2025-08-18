@@ -36,7 +36,9 @@ export PYTHONPATH="$PWD:$PWD/data_treatment/Code/Normalization:$PWD/data_treatme
 
 # --- Enforce MLP selection + threshold mode ---
 export FEDSEL_ENFORCE=1
-export FEDSEL_THRESH=0.50   # change if you want, e.g., 0.55
+export FEDSEL_THRESH=0.50
+export FEDSEL_JOURNAL_SELECTED_ONLY=1   # << only selected clients are saved in per-round CSVs
+
 
 # --- Nice to have: ensure logs and data dirs exist ---
 mkdir -p logs Data/logs Model
