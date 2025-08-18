@@ -15,9 +15,8 @@ from config.config import NUM_ROUNDS
 from datetime import datetime
 import csv
 import time
-
-from sklearn.metrics import confusion_matrix  # for CM feature
 from pathlib import Path
+from sklearn.metrics import confusion_matrix
 
 
 # -----------------------------
@@ -84,14 +83,10 @@ def log_confusion_matrix(rank, round_num, model, x_data, y_data_oh):
     out_csv = base_dir / f"round_{round_num:03d}.csv"
     np.savetxt(out_csv, cm, fmt="%d", delimiter=",")
 
-    # Row-normalize then average all cells → stable scalar feature for selector
-    # Row-normalize to get per-class distributions
+    # Row-normalize; use diagonal mean (avg per-class accuracy) as scalar feature
     row_sums = cm.sum(axis=1, keepdims=True) + 1e-9
     cm_norm = cm / row_sums
-
-    # Use the mean of the diagonal of the normalized CM (avg per-class accuracy)
     confusion_mean = float(np.trace(cm_norm) / cm_norm.shape[0])
-
 
     # Micro-aggregated "correct vs incorrect"
     correct = (y_true == y_pred)
@@ -239,7 +234,7 @@ def run_client(comm, rank):
         global_weights = comm.bcast(None, root=0)
         model.set_weights(global_weights)
 
-        # === (C) Train if active; otherwise skip and echo weights ===
+        # === (C) Train if active; otherwise evaluate-only ===
         start_snapshot = collect_system_metrics(rank, round_num)
         if active:
             model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
@@ -256,21 +251,63 @@ def run_client(comm, rank):
 
         # === (D) Statistical utility + confusion ===
         if active:
-            # Only selected clients journalize heavy CSVs
+            # Selected clients: train was done above; journalize to disk
             stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model) or {}
             conf  = log_confusion_matrix(rank, round_num, model, x_client, y_client) or {}
             metrics.update(stats)
             metrics.update(conf)
         else:
-            # Placeholders so selector has *all* required features each round
+            # --------- EVALUATE ONLY (NO training, NO disk I/O) ----------
+            # Evaluate current global model on local data
+            local_loss, local_accuracy = evaluate_keras_model(model, x_client, y_client)
+
+            # Confusion-derived metrics (compute only, do not save CSV)
+            y_true = np.argmax(y_client, axis=1)
+            y_pred = np.argmax(model.predict(x_client, batch_size=256, verbose=0), axis=1)
+            cm = confusion_matrix(y_true, y_pred)
+
+            # Row-normalize; use diagonal mean (avg per-class accuracy) as scalar feature
+            row_sums = cm.sum(axis=1, keepdims=True) + 1e-9
+            cm_norm = cm / row_sums
+            confusion_mean = float(np.trace(cm_norm) / cm_norm.shape[0])
+
+            # Micro collapse
+            correct = (y_true == y_pred)
+            tp = int(np.sum(correct))
+            total = int(len(y_true))
+            fp = int(np.sum(~correct))
+            fn = fp
+            tn = int(total - tp - fp - fn)
+
+            # Macro precision/recall/F1
+            per_class_prec, per_class_rec, per_class_f1 = [], [], []
+            C = int(cm.shape[0])
+            for c in range(C):
+                tp_c = int(cm[c, c])
+                fp_c = int(cm[:, c].sum() - tp_c)
+                fn_c = int(cm[c, :].sum() - tp_c)
+                prec_c = tp_c / (tp_c + fp_c) if (tp_c + fp_c) else 0.0
+                rec_c  = tp_c / (tp_c + fn_c) if (tp_c + fn_c) else 0.0
+                f1_c   = (2 * prec_c * rec_c) / (prec_c + rec_c) if (prec_c + rec_c) else 0.0
+                per_class_prec.append(prec_c)
+                per_class_rec.append(rec_c)
+                per_class_f1.append(f1_c)
+
+            precision_macro = float(np.mean(per_class_prec))
+            recall_macro    = float(np.mean(per_class_rec))
+            f1_macro        = float(np.mean(per_class_f1))
+
+            # Send full feature set (no journaling to disk)
             metrics.update({
                 "data_size": int(x_client.shape[0]),
                 "data_variance": float(np.var(x_client.astype(np.float32))),
-                "local_loss": 0.0,
-                "local_accuracy": 0.0,
-                "precision": 0.0, "recall": 0.0, "f1": 0.0,
-                "tn": 0, "fp": 0, "fn": 0, "tp": 0,
-                "confusion_mean": 0.0,   # REQUIRED by features.json
+                "local_loss": float(local_loss),
+                "local_accuracy": float(local_accuracy),
+                "precision": precision_macro,
+                "recall":    recall_macro,
+                "f1":        f1_macro,
+                "tn": tn, "fp": fp, "fn": fn, "tp": tp,
+                "confusion_mean": confusion_mean,
             })
 
         # === (E) Prepare weights to send ===
