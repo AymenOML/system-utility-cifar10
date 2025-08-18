@@ -1,2 +1,0 @@
-[job] CWD=/scratch/aymenoml/system-utility-cifar10
-[job][WARN] Model/mlp_client_selector.h5 NOT FOUND under /scratch/aymenoml/system-utility-cifar10/Model

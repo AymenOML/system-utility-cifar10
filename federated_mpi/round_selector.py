@@ -39,6 +39,33 @@ def _locate(path_candidates):
             return p
     return None
 
+def _normalize_feature_order(obj):
+    """
+    Accepts:
+      - list of feature names
+      - dict {"features":[...]} 
+      - dict {feature_name: index}  (will sort by index)
+      - dict {feature_name: anything} (will use sorted keys)
+    Returns a list of feature names, or None.
+    """
+    if obj is None:
+        return None
+    if isinstance(obj, list):
+        return obj
+    if isinstance(obj, dict):
+        if "features" in obj and isinstance(obj["features"], list):
+            return obj["features"]
+        # mapping name->index
+        if all(isinstance(k, str) for k in obj.keys()) and all(isinstance(v, (int, float)) for v in obj.values()):
+            return [k for k, _ in sorted(obj.items(), key=lambda kv: kv[1])]
+        # generic dict → deterministic order of keys
+        return sorted([k for k in obj.keys() if isinstance(k, str)])
+    # last resort
+    try:
+        return list(obj)
+    except Exception:
+        return None
+
 class RoundSelector:
     """
     Per-round: build features -> normalize -> (optional) heuristic label
@@ -48,7 +75,7 @@ class RoundSelector:
     Selected-only journaling: FEDSEL_JOURNAL_SELECTED_ONLY=1
     """
     def __init__(self, model_dir="Model", top_k=10):
-        # NOTE: top_k kept for API compatibility; ignored in threshold mode.
+        # top_k kept for API compatibility; ignored in threshold mode.
         self.model_dir = model_dir
         self.model_path = _locate([
             os.path.join(model_dir, "mlp_client_selector.h5"),
@@ -56,7 +83,6 @@ class RoundSelector:
         ])
         if not self.model_path:
             raise FileNotFoundError("Could not find mlp_client_selector.h5 in Model/ or Models/")
-
         self.model = load_model(self.model_path)
 
         # Optional training artifacts
@@ -73,7 +99,10 @@ class RoundSelector:
         self.scaler = None
         if self.features_path:
             with open(self.features_path, "r") as f:
-                self.feature_order = json.load(f)
+                raw = json.load(f)
+            self.feature_order = _normalize_feature_order(raw)
+            if not self.feature_order:
+                print("[selector] WARNING: features.json does not look like a list/dict of features; will infer.", flush=True)
         if self.scaler_path:
             with open(self.scaler_path, "rb") as f:
                 self.scaler = pickle.load(f)
@@ -118,16 +147,31 @@ class RoundSelector:
             rows.append(rec)
 
         df = pd.DataFrame(rows)
-        for col in ["round"] + inferred:
+
+        # If a pre-defined feature order is present, keep only those that exist in df
+        if feature_order:
+            exists = [c for c in feature_order if c in df.columns and c not in DROP_COLS]
+            if not exists:
+                print("[selector] WARNING: none of the features from features.json are present in metrics; falling back to inference.", flush=True)
+                inferred = [k for k in df.columns if k not in DROP_COLS]
+            else:
+                missing = [c for c in feature_order if c not in exists]
+                if missing:
+                    print(f"[selector] WARNING: missing features in metrics: {missing}", flush=True)
+                inferred = exists
+
+        # Ensure required columns exist
+        for col in ["round"] + list(inferred):
             if col not in df.columns:
                 df[col] = 0.0
 
+        # Coerce features to float, keep ID cols
         for col in inferred:
             df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0.0).astype(float)
         df["client_rank"] = df["client_rank"].astype(int)
         df["round"] = pd.to_numeric(df.get("round", 0), errors="coerce").fillna(0).astype(int)
 
-        return df[ID_COLS + inferred], inferred
+        return df[ID_COLS + list(inferred)], list(inferred)
 
     def normalize(self, df_features_only):
         X = df_features_only.values.astype(float)
@@ -141,10 +185,6 @@ class RoundSelector:
         return Xn
 
     def label_heuristic(self, df_full):
-        """
-        Optional: add heuristic labels for auditing.
-        Returns: df_labeled (includes class_label), thresholds dict (if available)
-        """
         if self._dl is None:
             return df_full.copy(), {}
         try:
@@ -174,11 +214,6 @@ class RoundSelector:
         return selected, probs
 
     def run_for_round(self, r, client_reports, out_dir):
-        """
-        Complete per-round pipeline. Returns list of selected client IDs (ints).
-        Saves CSVs under out_dir. If SELECTED_ONLY is True, all CSVs are filtered
-        to the selected set.
-        """
         os.makedirs(out_dir, exist_ok=True)
 
         # 1) Build features DF (IDs + features)
@@ -190,7 +225,7 @@ class RoundSelector:
         df_id = df_raw[ID_COLS].copy()
         df_feats = df_raw[feats_used].copy()
 
-        # 2) Normalize (using saved scaler or online)
+        # 2) Normalize
         Xn = self.normalize(df_feats)
         df_norm = pd.DataFrame(Xn, columns=feats_used)
         df_norm = pd.concat([df_id, df_norm], axis=1)
@@ -230,13 +265,13 @@ class RoundSelector:
         with open(os.path.join(out_dir, "selected_clients.txt"), "w") as f:
             f.write(",".join(map(str, selected)))
 
-        # Meta for audit (threshold + counts)
         meta = {
             "round": int(r),
             "threshold": float(self.threshold),
             "num_candidates": int(len(df_id)),
             "num_selected": int(len(selected)),
             "selected_only_saved": bool(SELECTED_ONLY),
+            "features_used": feats_used,
         }
         with open(os.path.join(out_dir, "selection_meta.json"), "w") as mf:
             json.dump(meta, mf, indent=2)
