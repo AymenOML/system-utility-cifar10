@@ -1,3 +1,3 @@
 # config.py — global constants
 
-NUM_ROUNDS = 20
+NUM_ROUNDS = 50
