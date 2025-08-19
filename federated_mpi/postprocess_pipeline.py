@@ -4,7 +4,7 @@ postprocess_pipeline.py
 Utilities for:
 1) Normalizing stats/system CSVs and confusion matrices (batch mode).
 2) Building a labeled training table (equal-importance, per-round).
-3) **Per-round selection**: normalize current round, apply cost inversion,
+3) Per-round selection: normalize current round, apply cost inversion,
    label, run the trained MLP, select clients for the next round, and journal.
 
 Intended usage in your training loop (server side):
@@ -167,6 +167,31 @@ def _read_confusion_mean_for_round(round_id: int, root: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def _dedupe_client_round(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Deduplicate rows per (client_rank, round).
+    If 'timestamp' exists, keep the latest; else keep the last observed.
+    """
+    if df.empty:
+        return df
+    df = df.copy()
+    # Ensure types
+    if "client_rank" in df.columns:
+        df["client_rank"] = pd.to_numeric(df["client_rank"], errors="coerce")
+    if "round" in df.columns:
+        df["round"] = pd.to_numeric(df["round"], errors="coerce")
+    # Sort by timestamp when available
+    if "timestamp" in df.columns:
+        # Try to parse a variety of timestamp formats; if fails, keep as-is
+        ts = pd.to_datetime(df["timestamp"], errors="coerce")
+        df = df.assign(_ts=ts)
+        df = df.sort_values(["client_rank", "round", "_ts"])
+        out = df.drop_duplicates(subset=["client_rank", "round"], keep="last").drop(columns=["_ts"])
+    else:
+        out = df.drop_duplicates(subset=["client_rank", "round"], keep="last")
+    return out
+
+
 # -------------------------
 # Batch Mode (optional)
 # -------------------------
@@ -184,6 +209,10 @@ def _normalize_stats_and_system(base_dir: str) -> Tuple[str, str]:
     df_stats = pd.read_csv(stats_csv)
     df_sys = pd.read_csv(system_csv)
 
+    # De-dupe globally before normalization
+    df_stats = _dedupe_client_round(df_stats)
+    df_sys = _dedupe_client_round(df_sys)
+
     df_stats_n = _minmax01(df_stats, exclude=ID_COLS)
     df_sys_n = _minmax01(df_sys, exclude=ID_COLS)
 
@@ -198,7 +227,7 @@ def _normalize_stats_and_system(base_dir: str) -> Tuple[str, str]:
 def _build_labeled_table_all_rounds(base_dir: str) -> pd.DataFrame:
     """
     Build a single labeled table across all rounds (batch mode).
-    Per your current heuristic, labeling is **per-round**.
+    Per your current heuristic, labeling is per-round.
     """
     stats_csv = os.path.join(base_dir, STATS_CSV_REL)
     system_csv = os.path.join(base_dir, SYSTEM_CSV_REL)
@@ -209,6 +238,10 @@ def _build_labeled_table_all_rounds(base_dir: str) -> pd.DataFrame:
 
     df_stats = pd.read_csv(stats_csv)
     df_sys = pd.read_csv(system_csv)
+
+    # De-dupe globally
+    df_stats = _dedupe_client_round(df_stats)
+    df_sys = _dedupe_client_round(df_sys)
 
     # Normalize globally before we split per round
     df_stats_n = _minmax01(df_stats, exclude=ID_COLS)
@@ -227,10 +260,17 @@ def _build_labeled_table_all_rounds(base_dir: str) -> pd.DataFrame:
     )
     df_all = df_all.merge(df_conf, on=["client_rank", "round"], how="left").fillna(0.0)
 
+    # Collapse any residual dupes after merge
+    df_all = (
+        df_all.sort_values(["client_rank", "round"])
+              .groupby(["client_rank", "round"], as_index=False)
+              .last()
+    )
+
     # Apply directionality
     df_all = _invert_costs(df_all)
 
-    # Label **per round**
+    # Label per round
     labeled_parts = []
     for r in all_rounds:
         chunk = df_all[df_all["round"] == r].copy()
@@ -242,7 +282,7 @@ def _build_labeled_table_all_rounds(base_dir: str) -> pd.DataFrame:
 
 def run_postprocessing(base_dir: str = "Data", out_csv: str = None) -> str:
     """
-    Batch mode: produces a **single** labeled CSV across all rounds.
+    Batch mode: produces a single labeled CSV across all rounds.
     Returns the output CSV path.
     """
     df_labeled = _build_labeled_table_all_rounds(base_dir=base_dir)
@@ -262,18 +302,15 @@ def run_postprocessing(base_dir: str = "Data", out_csv: str = None) -> str:
 
 def _mlp_predict(df_labeled: pd.DataFrame, artifacts_dir: str, threshold: float) -> pd.DataFrame:
     """Load artifacts and add p_select, mlp_label."""
-    # Lazy import TF to avoid heavy import when only batch helpers are used
     import pickle
     from tensorflow.keras.models import load_model  # type: ignore
 
-    # Load artifacts
     with open(os.path.join(artifacts_dir, "features.json"), "r") as f:
         features = json.load(f)
     with open(os.path.join(artifacts_dir, "scaler.pkl"), "rb") as f:
         scaler = pickle.load(f)
     model = load_model(os.path.join(artifacts_dir, "mlp_client_selector.h5"))
 
-    # Ensure all features exist
     missing = [c for c in features if c not in df_labeled.columns]
     if missing:
         raise ValueError(f"Missing expected feature columns for MLP: {missing}")
@@ -281,7 +318,6 @@ def _mlp_predict(df_labeled: pd.DataFrame, artifacts_dir: str, threshold: float)
     X = df_labeled[features].astype("float32").values
     Xs = scaler.transform(X)
 
-    # Predict
     p = model.predict(Xs, verbose=0).ravel()
     out = df_labeled.copy()
     out["p_select"] = p
@@ -292,7 +328,7 @@ def _mlp_predict(df_labeled: pd.DataFrame, artifacts_dir: str, threshold: float)
 def _load_round_slice(base_dir: str, round_id: int) -> pd.DataFrame:
     """
     Load, normalize (per-round), merge stats+system+confusion for a given round,
-    and apply directionality.
+    and apply directionality. Ensures only the corresponding round is used.
     """
     stats_csv = os.path.join(base_dir, STATS_CSV_REL)
     system_csv = os.path.join(base_dir, SYSTEM_CSV_REL)
@@ -306,35 +342,49 @@ def _load_round_slice(base_dir: str, round_id: int) -> pd.DataFrame:
     df_stats = pd.read_csv(stats_csv)
     df_sys = pd.read_csv(system_csv)
 
-    # Filter to current round
+    # --- Strict round filtering (ensures only the corresponding round is evaluated)
     df_stats = df_stats[df_stats["round"] == round_id].copy()
-    df_sys = df_sys[df_sys["round"] == round_id].copy()
+    df_sys   = df_sys[df_sys["round"] == round_id].copy()
 
     if df_stats.empty and df_sys.empty:
         raise RuntimeError(f"No stats/system rows found for round {round_id}.")
 
+    # De-dupe within round
+    df_stats = _dedupe_client_round(df_stats)
+    df_sys   = _dedupe_client_round(df_sys)
+
     # Per-round min–max
     df_stats_n = _minmax01(df_stats, exclude=ID_COLS) if not df_stats.empty else df_stats
-    df_sys_n = _minmax01(df_sys, exclude=ID_COLS) if not df_sys.empty else df_sys
+    df_sys_n   = _minmax01(df_sys,   exclude=ID_COLS) if not df_sys.empty else df_sys
 
     # Merge
     df = df_stats_n.merge(df_sys_n, on=["client_rank", "round"], how="outer")
 
-    # Confusion mean
+    # Confusion mean for the same round only
     df_conf = _read_confusion_mean_for_round(round_id, root=conf_root)
     if df_conf.empty:
-        # No confusion written? Still proceed with 0.0
         df["confusion_mean"] = 0.0
     else:
         df = df.merge(df_conf, on=["client_rank", "round"], how="left")
         df["confusion_mean"] = df["confusion_mean"].fillna(0.0)
 
+    # Collapse any accidental duplicates after merge
+    df = (
+        df.sort_values(["client_rank", "round"])
+          .groupby(["client_rank", "round"], as_index=False)
+          .last()
+    )
+
     # Apply directionality
     df = _invert_costs(df)
 
-    # Clean client_rank
+    # Clean client_rank dtype
     if "client_rank" in df.columns:
         df["client_rank"] = pd.to_numeric(df["client_rank"], errors="coerce").astype("Int64")
+
+    # Final guard: ensure we only have the requested round
+    if not df["round"].dropna().astype(int).eq(int(round_id)).all():
+        raise RuntimeError(f"Round leakage detected in features for round {round_id}.")
 
     return df
 
@@ -359,9 +409,8 @@ def run_round_selection(
     Returns:
       (pred_csv_path, selected_client_ids)
     """
-    # 1–3) Load & normalize & invert
+    # 1–3) Load & normalize & invert for the requested round only
     df_round = _load_round_slice(base_dir=base_dir, round_id=round_id)
-
     if df_round.empty:
         raise RuntimeError(f"No data available to select on round {round_id}.")
 
@@ -371,16 +420,20 @@ def run_round_selection(
     # 5) Predict with MLP
     df_pred = _mlp_predict(df_lab, artifacts_dir=artifacts_dir, threshold=threshold)
 
+    # Ensure one row per client before selection: keep the highest p_select
+    df_pred = (
+        df_pred.sort_values("p_select", ascending=False)
+               .groupby("client_rank", as_index=False)
+               .first()
+    )
+
     # 6) Select
     selected = df_pred.loc[df_pred["mlp_label"] == 1, "client_rank"].dropna().astype(int).tolist()
     if len(selected) == 0:
         # edge case: choose top-3 by p_select
         topk = (
             df_pred.sort_values("p_select", ascending=False)
-            .head(3)["client_rank"]
-            .dropna()
-            .astype(int)
-            .tolist()
+                   .head(3)["client_rank"].dropna().astype(int).tolist()
         )
         selected = topk
 
@@ -399,12 +452,11 @@ def run_round_selection(
         jf.write(f"Round {round_id} — threshold={threshold}\n")
         jf.write("p_select by client:\n")
         for _, row in df_pred.sort_values("client_rank").iterrows():
-            # guard for NaN client ids
             cid = int(row["client_rank"]) if pd.notna(row["client_rank"]) else -1
             jf.write(f"  c{cid}: {row['p_select']:.4f} (mlp={int(row['mlp_label'])})\n")
-        jf.write(f"Selected clients for next round: {selected}\n\n")
+        jf.write(f"Selected clients for next round: {sorted(set(selected))}\n\n")
 
-    return pred_csv, selected
+    return pred_csv, sorted(set(selected))
 
 
 # -------------------------

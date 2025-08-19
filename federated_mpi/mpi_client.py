@@ -123,9 +123,10 @@ def compute_per_round_metrics(start_snapshot, end_snapshot):
 
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
-    # print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
-    import platform
-    print(f"    [Client {rank}] Starting on host: {platform.node()}", flush=True)
+    print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
+    
+    # import platform
+    # print(f"    [Client {rank}] Starting on host: {platform.node()}", flush=True)
 
 
     if rank == 0:
