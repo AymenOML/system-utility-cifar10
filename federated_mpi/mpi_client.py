@@ -123,7 +123,10 @@ def compute_per_round_metrics(start_snapshot, end_snapshot):
 
 def run_client(comm, rank):
     print(f"    [Client {rank}] Initializing...", flush=True)
-    print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
+    # print(f"    [Client {rank}] Starting on host: {os.uname().nodename}", flush=True)
+    import platform
+    print(f"    [Client {rank}] Starting on host: {platform.node()}", flush=True)
+
 
     if rank == 0:
         print(f"[Server {rank}] Nothing to do in run_client()", flush=True)
@@ -157,15 +160,27 @@ def run_client(comm, rank):
     for round_num in range(1, NUM_ROUNDS + 1):
         model = build_cnn_model()
 
+        # >>> ADD: receive who should TRAIN this round
+        selected_trainers = comm.bcast(None, root=0)
+        should_train = (rank in selected_trainers)
+        role = "TRAIN" if should_train else "EVAL_ONLY"
+        print(f"    [Client {rank}] Round {round_num} — role: {role}", flush=True)
+
         print(f"    [Client {rank}] Round {round_num} - Waiting for global weights...", flush=True)
         global_weights = comm.bcast(None, root=0)
         model.set_weights(global_weights)
 
-        print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
+        # >>> CHANGE: conditionally train; always evaluate/log utilities
         start_snapshot = collect_system_metrics(rank, round_num)
-        model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
-        end_snapshot = collect_system_metrics(rank, round_num)
 
+        if should_train:
+            print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
+            model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
+        else:
+            print(f"    [Client {rank}] Round {round_num} - Skipping training (evaluation only).", flush=True)
+
+        # Keep original order: compute system deltas around the (optional) training phase
+        end_snapshot = collect_system_metrics(rank, round_num)
         metrics = compute_per_round_metrics(start_snapshot, end_snapshot)
         metrics.update({
             "client_rank": rank,
@@ -174,24 +189,29 @@ def run_client(comm, rank):
         })
         print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
 
+        # Statistical utility (always)
         stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
         print(f"    [Client {rank}] Statistical Utility: {stats}", flush=True)
 
-        # New: Confusion matrix logging as CSV
+        # Confusion matrix (always)
         log_confusion_matrix(rank, round_num, model, x_client, y_client)
 
-        updated_weights = serialize_weights(model.get_weights())
-        print(f"    [Client {rank}] Round {round_num} - Sending updated weights to server...", flush=True)
+        # >>> CHANGE: send weights only if trained, else send None
+        if should_train:
+            updated_weights = serialize_weights(model.get_weights())
+        else:
+            updated_weights = None
 
+        print(f"    [Client {rank}] Round {round_num} - Sending weights ({'trained' if should_train else 'None'})...", flush=True)
         try:
             comm.send(updated_weights, dest=0, tag=rank)
         except Exception as e:
-            print(f"[Client {rank}] Failed to send: {e}", flush=True)
+            print(f"[Client {rank}] Failed to send weights: {e}", flush=True)
 
         try:
             comm.send(metrics, dest=0, tag=rank + 100)
         except Exception as e:
-            print(f"[Client {rank}] Failed to send: {e}", flush=True)
+            print(f"[Client {rank}] Failed to send metrics: {e}", flush=True)
 
     print(f"    [Client {rank}] Training complete. Waiting for others...", flush=True)
     print(f"    [Client {rank}] Exiting.", flush=True)
