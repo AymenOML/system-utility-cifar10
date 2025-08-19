@@ -33,7 +33,7 @@ SYSTEM_FIELDS = [
 
 SELECTION_JOURNAL = os.path.join(DATA_DIR, "selection_journal.txt")
 ARTIFACTS_DIR = "Models"      # change to "Model" if that's your folder name
-MLP_THRESHOLD = 0.5
+MLP_THRESHOLD = 0.0 # Put to 0 for data collection
 
 
 # >>> ADD: safe CSV appender (doesn't affect your plotting)
