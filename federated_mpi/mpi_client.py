@@ -128,7 +128,6 @@ def run_client(comm, rank):
     # import platform
     # print(f"    [Client {rank}] Starting on host: {platform.node()}", flush=True)
 
-
     if rank == 0:
         print(f"[Server {rank}] Nothing to do in run_client()", flush=True)
         return
@@ -161,7 +160,7 @@ def run_client(comm, rank):
     for round_num in range(1, NUM_ROUNDS + 1):
         model = build_cnn_model()
 
-        # >>> ADD: receive who should TRAIN this round
+        # Receive who should TRAIN this round
         selected_trainers = comm.bcast(None, root=0)
         should_train = (rank in selected_trainers)
         role = "TRAIN" if should_train else "EVAL_ONLY"
@@ -171,16 +170,24 @@ def run_client(comm, rank):
         global_weights = comm.bcast(None, root=0)
         model.set_weights(global_weights)
 
-        # >>> CHANGE: conditionally train; always evaluate/log utilities
+        # === FAIRNESS FIX ===
+        # Start system metrics BEFORE evaluation so eval (+ optional train) are both included
         start_snapshot = collect_system_metrics(rank, round_num)
 
+        # 1) Always evaluate & log on the GLOBAL model (pre-training)
+        stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
+        print(f"    [Client {rank}] Statistical Utility (pre-train): {stats}", flush=True)
+
+        log_confusion_matrix(rank, round_num, model, x_client, y_client)
+
+        # 2) Train only if selected
         if should_train:
             print(f"    [Client {rank}] Round {round_num} - Training on local data...", flush=True)
             model.fit(x_client, y_client, epochs=1, batch_size=32, verbose=0)
         else:
             print(f"    [Client {rank}] Round {round_num} - Skipping training (evaluation only).", flush=True)
 
-        # Keep original order: compute system deltas around the (optional) training phase
+        # End snapshot AFTER eval (+ optional train)
         end_snapshot = collect_system_metrics(rank, round_num)
         metrics = compute_per_round_metrics(start_snapshot, end_snapshot)
         metrics.update({
@@ -190,14 +197,7 @@ def run_client(comm, rank):
         })
         print(f"    [Client {rank}] System Stats: {metrics}", flush=True)
 
-        # Statistical utility (always)
-        stats = log_statistical_utility_tf(rank, round_num, x_client, y_client, model)
-        print(f"    [Client {rank}] Statistical Utility: {stats}", flush=True)
-
-        # Confusion matrix (always)
-        log_confusion_matrix(rank, round_num, model, x_client, y_client)
-
-        # >>> CHANGE: send weights only if trained, else send None
+        # Send weights (trained or None) + system metrics
         if should_train:
             updated_weights = serialize_weights(model.get_weights())
         else:
