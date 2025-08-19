@@ -1,15 +1,13 @@
-{
-  "features": [
-    "data_size",
-    "data_variance",
-    "local_loss",
-    "local_accuracy",
-    "cpu_time",
-    "ram_used_mb",
-    "net_sent_bytes",
-    "net_recv_bytes",
-    "gpu_mem_used_mb",
-    "gpu_load",
-    "confusion_mean"
-  ]
-}
+[
+  "data_size",
+  "data_variance",
+  "local_loss",
+  "local_accuracy",
+  "cpu_time",
+  "ram_used_mb",
+  "net_sent_bytes",
+  "net_recv_bytes",
+  "gpu_mem_used_mb",
+  "gpu_load",
+  "confusion_mean"
+]
