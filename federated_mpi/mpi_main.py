@@ -18,7 +18,7 @@ def main():
     if rank == 0:
         from federated_mpi.postprocess_pipeline import run_postprocessing
         # Set fail_job_on_error=True if you prefer the job to FAIL when post steps fail
-        run_postprocessing(base_data_dir="Data", fail_job_on_error=False)
+        run_postprocessing(base_data_dir="Data")
 
     # Optional: a second barrier to keep everyone in lockstep
     comm.Barrier()
