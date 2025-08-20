@@ -1,0 +1,20 @@
+{
+  "round": 14,
+  "threshold": 0.5,
+  "num_candidates": 10,
+  "num_selected": 10,
+  "selected_only_saved": true,
+  "features_used": [
+    "data_size",
+    "data_variance",
+    "local_loss",
+    "local_accuracy",
+    "cpu_time",
+    "ram_used_mb",
+    "net_sent_bytes",
+    "net_recv_bytes",
+    "gpu_mem_used_mb",
+    "gpu_load",
+    "confusion_mean"
+  ]
+}
